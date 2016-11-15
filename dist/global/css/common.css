@@ -20,6 +20,12 @@ h1 {
   margin: 0;
   padding: 0; }
 
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
 /* index.html */
 .home-list {
   margin: 2rem auto;
@@ -414,7 +420,7 @@ footer .ul_col2 li {
     display: block; }
 
 .tab-wrapper .tabs-sec #sect_01 {
-  display: block;
+  display: none;
   text-align: center;
   height: 18.14rem;
   background: url("../images/guagua/bg1.jpg") no-repeat 0 0/cover; }
@@ -647,4 +653,135 @@ footer .ul_col2 li {
           height: 0.36rem; } }
 
 .tab-wrapper .tabs-sec #sect_02 {
-  display: none; }
+  display: block;
+  background: url("../images/guagua/bg2.jpg") no-repeat 0 -1.26rem/cover;
+  padding: 6rem 0.3rem 2rem; }
+  .tab-wrapper .tabs-sec #sect_02 .guaguale {
+    height: 3.55rem;
+    width: 6.9rem;
+    background: url("../images/guagua/guagua.png") no-repeat 0 0/cover;
+    padding: 0.24rem 0.2rem; }
+    .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
+      font-family: "宋体";
+      color: #fff;
+      text-align: center;
+      line-height: 3.06rem;
+      text-align: center;
+      background: url("../images/guagua/about_banner.jpg") no-repeat 0 0/cover;
+      position: relative;
+      width: 100%;
+      height: 100%; }
+      @media screen and (max-width: 321px) {
+        .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
+          font-size: 0.48rem; }
+          .tab-wrapper .tabs-sec #sect_02 .guaguale .area span.red_bg {
+            height: 0.36rem; } }
+      @media screen and (min-width: 321px) and (max-width: 400px) {
+        .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
+          font-size: 0.48rem; }
+          .tab-wrapper .tabs-sec #sect_02 .guaguale .area span.red_bg {
+            height: 0.36rem; } }
+      @media screen and (min-width: 400px) and (max-width: 640px) {
+        .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
+          font-size: 0.48rem; }
+          .tab-wrapper .tabs-sec #sect_02 .guaguale .area span.red_bg {
+            height: 0.36rem; } }
+      @media screen and (min-width: 640px) {
+        .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
+          font-size: 0.48rem; }
+          .tab-wrapper .tabs-sec #sect_02 .guaguale .area span.red_bg {
+            height: 0.36rem; } }
+      .tab-wrapper .tabs-sec #sect_02 .guaguale .area canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%; }
+  .tab-wrapper .tabs-sec #sect_02 .num-page {
+    overflow: hidden;
+    line-height: 0.5rem;
+    margin-top: 0.5rem; }
+    .tab-wrapper .tabs-sec #sect_02 .num-page span {
+      color: #fff;
+      text-align: left; }
+      @media screen and (max-width: 321px) {
+        .tab-wrapper .tabs-sec #sect_02 .num-page span {
+          font-size: 0.32rem; }
+          .tab-wrapper .tabs-sec #sect_02 .num-page span span.red_bg {
+            height: 0.36rem; } }
+      @media screen and (min-width: 321px) and (max-width: 400px) {
+        .tab-wrapper .tabs-sec #sect_02 .num-page span {
+          font-size: 0.32rem; }
+          .tab-wrapper .tabs-sec #sect_02 .num-page span span.red_bg {
+            height: 0.36rem; } }
+      @media screen and (min-width: 400px) and (max-width: 640px) {
+        .tab-wrapper .tabs-sec #sect_02 .num-page span {
+          font-size: 0.32rem; }
+          .tab-wrapper .tabs-sec #sect_02 .num-page span span.red_bg {
+            height: 0.36rem; } }
+      @media screen and (min-width: 640px) {
+        .tab-wrapper .tabs-sec #sect_02 .num-page span {
+          font-size: 0.32rem; }
+          .tab-wrapper .tabs-sec #sect_02 .num-page span span.red_bg {
+            height: 0.36rem; } }
+      .tab-wrapper .tabs-sec #sect_02 .num-page span em {
+        padding: 0 0.05rem;
+        font-style: normal;
+        color: #fff100;
+        text-align: left; }
+        @media screen and (max-width: 321px) {
+          .tab-wrapper .tabs-sec #sect_02 .num-page span em {
+            font-size: 0.36rem; }
+            .tab-wrapper .tabs-sec #sect_02 .num-page span em span.red_bg {
+              height: 0.36rem; } }
+        @media screen and (min-width: 321px) and (max-width: 400px) {
+          .tab-wrapper .tabs-sec #sect_02 .num-page span em {
+            font-size: 0.36rem; }
+            .tab-wrapper .tabs-sec #sect_02 .num-page span em span.red_bg {
+              height: 0.36rem; } }
+        @media screen and (min-width: 400px) and (max-width: 640px) {
+          .tab-wrapper .tabs-sec #sect_02 .num-page span em {
+            font-size: 0.36rem; }
+            .tab-wrapper .tabs-sec #sect_02 .num-page span em span.red_bg {
+              height: 0.36rem; } }
+        @media screen and (min-width: 640px) {
+          .tab-wrapper .tabs-sec #sect_02 .num-page span em {
+            font-size: 0.36rem; }
+            .tab-wrapper .tabs-sec #sect_02 .num-page span em span.red_bg {
+              height: 0.36rem; } }
+  .tab-wrapper .tabs-sec #sect_02 .list-info {
+    margin-top: 0.2rem; }
+    .tab-wrapper .tabs-sec #sect_02 .list-info ul {
+      padding-top: 0.3rem;
+      background: url("../images/guagua/list_bg2.png") no-repeat 0 0/cover; }
+  .tab-wrapper .tabs-sec #sect_02 .opt-btn {
+    color: #fff100;
+    text-align: center;
+    line-height: 0.4rem;
+    padding: 0.1rem;
+    margin-top: 0.34rem; }
+    @media screen and (max-width: 321px) {
+      .tab-wrapper .tabs-sec #sect_02 .opt-btn {
+        font-size: 0.24rem; }
+        .tab-wrapper .tabs-sec #sect_02 .opt-btn span.red_bg {
+          height: 0.36rem; } }
+    @media screen and (min-width: 321px) and (max-width: 400px) {
+      .tab-wrapper .tabs-sec #sect_02 .opt-btn {
+        font-size: 0.24rem; }
+        .tab-wrapper .tabs-sec #sect_02 .opt-btn span.red_bg {
+          height: 0.36rem; } }
+    @media screen and (min-width: 400px) and (max-width: 640px) {
+      .tab-wrapper .tabs-sec #sect_02 .opt-btn {
+        font-size: 0.24rem; }
+        .tab-wrapper .tabs-sec #sect_02 .opt-btn span.red_bg {
+          height: 0.36rem; } }
+    @media screen and (min-width: 640px) {
+      .tab-wrapper .tabs-sec #sect_02 .opt-btn {
+        font-size: 0.24rem; }
+        .tab-wrapper .tabs-sec #sect_02 .opt-btn span.red_bg {
+          height: 0.36rem; } }
+  .tab-wrapper .tabs-sec #sect_02 .sec-foot {
+    margin-top: 0.2rem; }
+    .tab-wrapper .tabs-sec #sect_02 .sec-foot p {
+      color: #fff; }

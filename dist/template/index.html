@@ -15,9 +15,17 @@
   <body>
     <section>
       <ul class="home-list">
-        <li><a href="template/pop-home.html">pop home</a></li>
+        <li style="heigt:40px;" class="ok"><a href="template/pop-home.html">pop home</a></li>
         <li><a href="template/guaguale.html">刮刮乐</a></li>
       </ul>
     </section>
+    <script>
+      var liArr = document.getElementsByTagName('li');
+      var isSupport = document.implementation.hasFeature('StyleSheets','2.0');
+      console.log(isSupport);
+      var computerStyle = document.defaultView.getComputedStyle(liArr[0],null);
+      
+      console.log(computerStyle.width);
+    </script>
   </body>
 </html>
