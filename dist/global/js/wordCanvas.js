@@ -1,6 +1,7 @@
 var writeWordFun = function () {
-    var canvasW = 600,
-        canvasH = 600;
+    var canvasWidth = Math.min(800, document.documentElement.clientWidth - 20);
+    var canvasW = canvasWidth,
+        canvasH = canvasWidth;
     var canvasWord = document.getElementById('wordCanvas');
     var wordContext = canvasWord.getContext('2d');
     canvasWord.width = canvasW;
@@ -51,8 +52,8 @@ var writeWordFun = function () {
     };
     var minV = 0.1,
         maxV = 10;
-    var minLineW = 1,
-        maxLineW = 20;
+    var minLineW = 0.1,
+        maxLineW = 10;
 
     var getLineWidth = function (s, t) {
         var v = s / t;
@@ -71,20 +72,22 @@ var writeWordFun = function () {
         return outLineW * 1 / 3 + lastLineW * 2 / 3;
     };
     var writeWord = function () {
-        var downEvent = function () {};
-        canvasWord.onmousedown = function (e) {
+        var downEvent = function (point) {
             mouseDown = true;
-            lastPos = getEleViewPos(e.clientX, e.clientY);
+            lastPos = getEleViewPos(point.x, point.y);
             lastTime = new Date().getTime();
         };
-        canvasWord.onmousemove = function (e) {
-            var currentPos = getEleViewPos(e.clientX, e.clientY);
-            var currentTime = new Date().getTime();
-            var t = currentTime - lastTime;
-            var s = Math.sqrt((currentPos.x - lastPos.x) * (currentPos.x - lastPos.x) + (currentPos.y - lastPos.y) * (currentPos.y - lastPos.y));
-            var lineWith = getLineWidth(s, t);
-
+        var upEvent = function () {
+            mouseDown = false;
+        };
+        var moveEvent = function (point) {
             if (mouseDown) {
+                var currentPos = getEleViewPos(point.x, point.y);
+                var currentTime = new Date().getTime();
+                var t = currentTime - lastTime;
+                var s = Math.sqrt((currentPos.x - lastPos.x) * (currentPos.x - lastPos.x) + (currentPos.y - lastPos.y) * (currentPos.y - lastPos.y));
+                var lineWith = getLineWidth(s, t);
+
                 wordContext.beginPath();
                 wordContext.strokeStyle = 'black';
                 wordContext.lineWidth = lineWith;
@@ -99,18 +102,51 @@ var writeWordFun = function () {
                 lastLineW = lineWith;
             }
         };
-        canvasWord.onmouseup = function (e) {
-            mouseDown = false;
-        };
-        canvasWord.onmouseout = function (e) {
-            mouseDown = false;
-        };
-    };
 
+        canvasWord.addEventListener('mousedown', function (e) {
+            e.preventDefault();
+            downEvent({ x: e.clientX, y: e.clientY });
+        }, false);
+        canvasWord.addEventListener('mouseup', function (e) {
+            e.preventDefault();
+            upEvent();
+        }, false);
+        canvasWord.addEventListener('mouseout', function (e) {
+            e.preventDefault();
+            upEvent();
+        }, false);
+        canvasWord.addEventListener('mousemove', function (e) {
+            e.preventDefault();
+            moveEvent({ x: e.clientX, y: e.clientY });
+        }, false);
+        canvasWord.addEventListener('touchstart', function (e) {
+            e.preventDefault();
+            var touch = e.touches[0];
+            downEvent({ x: touch.pageX, y: touch.pageY });
+        }, false);
+        canvasWord.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+            var touch = e.touches[0];
+            moveEvent({ x: touch.pageX, y: touch.pageY });
+        }, false);
+        canvasWord.addEventListener('touchend', function (e) {
+            e.preventDefault();
+            upEvent();
+        }, false);
+    };
+    var cleatEvent = function () {
+        var clearBtn = document.getElementById("clearBtn");
+        var clearFun = function () {
+            wordContext.clearRect(0, 0, canvasW, canvasH);
+            drawRiceGrid();
+        };
+        clearBtn.addEventListener("click", clearFun, false);
+    };
     return {
         initGrid: function () {
             drawRiceGrid();
             writeWord();
+            cleatEvent();
         }
     };
 }();
