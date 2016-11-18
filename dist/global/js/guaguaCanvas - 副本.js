@@ -1,9 +1,4 @@
-'user strict';
-
 window.onload = function () {
-    var commonEvent = {};
-    commonEvent.prototype = {};
-
     function getElementLeft(ele) {
         var actualLeft = ele.offsetLeft;
         var current = ele.offsetParent;

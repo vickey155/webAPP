@@ -1,12 +1,4 @@
- 'user strict'
-window.onload =function () {
-    var commonEvent = {};
-    commonEvent.prototype ={
-
-    }
-
-
-
+ window.onload =function () {
      function getElementLeft(ele){
          var actualLeft = ele.offsetLeft;
          var current = ele.offsetParent;
@@ -161,7 +153,6 @@ window.onload =function () {
          img.src = 'http://www.baidu.com/img/bdlogo.gif';
 
      })(document.body.style);
-
 
  }
     
