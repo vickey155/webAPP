@@ -1,39 +1,29 @@
 
-html,body{width:100%;overflow-x:hidden;overflow-y:auto;}
-html *{box-sizing: border-box;font-family:'Hiragino Sans GB w6';}
-body{padding:0;}
+html,body{width:100%;overflow-x:hidden;overflow-y:auto;background-color: #efeff4;}
+*{box-sizing: border-box;font-family:"Helvetica Neue", Helvetica, sans-serif;line-height: 1.5}
+body{padding:0;color:#3d4145;}
 img,span,a{display: inline-block;vertical-align: top;}
 h1{font-weight:normal;margin:0; padding:0;}
 .fl{float: left;}
 .fr{float:right;}
 $white:#fff;
+$defaultC:#3d4145;
 $c3:#333;
-@mixin fontFormat($fz:1rem,$fc:$c3,$ta:left){
+@mixin fontFormat($fz:1rem,$fc:$defaultC,$ta:left,$wgt:normal){
   color:$fc;
   text-align: $ta;
+  font-weight: $wgt;
   @media screen and (max-width: 321px) {
     font-size:$fz;
-    span.red_bg {
-      height: 0.36rem;
-    }
   }
   @media screen and (min-width: 321px) and (max-width:400px) {
     font-size:$fz;
-    span.red_bg {
-      height: 0.36rem;
-    }
   }
   @media screen and (min-width: 400px) and(max-width:640px) {
     font-size:$fz ;
-    span.red_bg {
-      height: 0.36rem;
-    }
   }
   @media screen and (min-width: 640px) {
     font-size:$fz ;
-    span.red_bg {
-      height: 0.36rem;
-    }
   }
 }
 @mixin opacity_bg($opa:0.8,$col:#000){
@@ -45,405 +35,88 @@ $c3:#333;
   bottom:0;
   z-index: 2;
 }
-/* index.html */
-.home-list{
-  margin:2rem auto;
-  width: 3rem;
-  li{
-    margin-bottom:0.2rem;
-    a{
-      @include fontFormat($fz:0.3rem);
-      line-height:0.5rem;
-      text-decoration:underline;
-    }
-  }
-}
-
-/* pop home */
-
-header.col2{
-  overflow: hidden;
-  div{
-    width: 50%;
-    float: left;
-    height: 1rem;
-    padding-top:0.2rem;
-    padding-left:0.2rem;
-  }
-  .log{
-    img{
-      width: 2.8rem;
-    }
-  }
-  .txt h1{
-    @include fontFormat($fz:0.24rem,$ta:right);
-    padding-right:0.2rem;
-    line-height:0.63rem;
-    font-family:'Hiragino Sans GB';
-  }
-}
-section.bg{
-  background-color: #f5f5f5;
-  padding-bottom: 0.01rem;
+/* VIPapply.html */
+.vipsection{
+  min-height: 100%;
   .banner{
-    background-color: #eee;
-    width:100%;
-    height: 2.3rem;
-    position: relative;
-    border-bottom:1px solid #ccc;
-    ul.ul_col1{
-      li{
-        width:100%;
-        height: 100%;
-        position: absolute;
-        top:0;
-        left:0;
-        z-index:2;
-      }
-    }
+      width: 100%;
+      height:2.05rem;
+      background:#39F url('/global/images/LOOGO.png') no-repeat 50% 50%;
   }
-  .sec_icons{
-    background-color: #fff;
-    ul.ul_col3{
-      overflow: hidden;
-      li{
-        width:33%;
-        float:left;
-        padding-top:0.18rem;
-        text-align: center;
-        span{
-          width:0.8rem;
-          height:0.8rem;
-          background-color: #ccc;
-          -webkit-border-radius:0.04rem;
-          -moz-border-radius:0.04rem;
-          border-radius:0.04rem;
-        }
-        p{
-          @include fontFormat($fz:0.24rem,$ta:center);
-          line-height:0.4rem;
-          padding: 0.06rem 0;
-        }
-      }
-    }
-  }
-  .sec_pic{
-    margin:0.2rem 0;
-    background-color: #fff;
-    .pic_list{
-      margin:0 0.2rem;
-      padding-bottom:0.2rem;
-      h1{
-        @include fontFormat($fz:0.32rem,$ta:center);
-        line-height:0.76rem;
-        text-align: left;
-        span.red_bg{
-          width:0.1rem;
-          height:0.38rem;
-          background-color: #d32027;
-          margin-top: 0.18rem;
-          margin-right: 0.15rem;
-        }
-      }
-      ul{
-        overflow: hidden;
-        li{
-          position: relative;
-          min-height: 0.8rem;
-          float:left;
-          img{
-            width:100%;
-          }
-          .txtstatu{
-            width:100%;
-            height:0.64rem;
-            position: absolute;
-            left:0;
-            bottom:0;
-            z-index:2;
-            .opac_bg{
-              @include opacity_bg($opa:0.6);
-              width:100%;
-              height:100%;
-              z-index:3;
-            }
-            .txt{
-              position: absolute;
-              left:0;
-              bottom:0;
-              z-index:4;
-              padding:0.01rem 0.08rem;
-              width:100%;
-              p{
-                @include fontFormat($fz:0.2rem,$fc:#fff);
-                line-height:0.3rem;
-                height: 0.3rem;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-              }
-            }
-
-          }
-        }
-      }
-      ul.ul_col2{
-        margin-left: -2%;
-        li {
-          width: 48%;
-          margin-left: 2%;
-        }
-      }
-      ul.ul_col3{
-         margin-left: -1%;
-        li {
-          width: 32.1%;
-          margin-left: 1.2%;
-        }
-      }
-      ul.ul_col4{
-        margin-left: -1%;
-        li {
-          width: 24%;
-          margin-left: 1%;
-          background-color: #ccc;
-        }
-      }
-    }
-  }
-}
-footer{
-  ul{
-    overflow: hidden;
-    li{
-      float:left;
-      overflow: hidden;
-      padding:0.2rem 0;
+  .sec{
+    padding: 0.4rem 0.2rem;
+    .wrapper{
+      background:#fff;
+      box-shadow:0 0.02rem 0.03rem rgba(0, 0, 0, 0.3);
+      border-radius:0.04rem;
+      margin-bottom: 0.2rem;
       text-align: center;
-      a{
-        @include fontFormat($fz:0.28rem,$fc:#666,$ta:center);
+      padding:0.28rem 0.2rem;
+      h2{
+         @include fontFormat($fz:0.36rem,$fc:#3d4145,$ta:center,$wgt:bold);
       }
-      span.border-r{
-        width:0.02rem;
-        height:0.2rem;
-        background-color: #a0a0a0;
-        float:right;
-        margin-top:0.1rem;
-      }
-    }
-  }
-  .ul_col3{
-    border-bottom: 2px solid #a0a0a0;
-    li{
-      width: 33%;
-
-    }
-  }
-  .ul_col2{
-    li{
-      width: 50%;
-
-    }
-  }
-}
-
-/*刮刮乐*/
-
-.title{
-  height:0.7rem;
-  @include fontFormat($fz:0.32rem,$fc:#fff);
-  line-height:0.7rem;
-  background-color: #e13e3f;
-  text-align: center;
-  a{
-    @include fontFormat($fz:0.28rem,$fc:#fff);
-    line-height:0.7rem;
-    float:left;
-  }
-  span{
-    margin-left: -0.5rem;
-  }
-}
-.tab-wrapper{
-  .tabs-a{
-    a{
-      @include fontFormat($fz:0.32rem,$fc:#666,$ta:center) ;
-      width:50%;
-      line-height:0.74rem;
-      height:0.74rem;
-      position: relative;
-      span{
-        display: none;
-        position: absolute;
-        left:0;
-        bottom:-0.01rem;
-        width:100%;
-        height:0.05rem;
-        background-color: #c41d3f;
-        i{
-          width:0;
-          height:0;
-          border-left:0.15rem solid transparent;
-          border-right:0.15rem solid transparent;
-          border-bottom:0.15rem solid #c41d3f;
-          position: absolute;
-          bottom:0;
-          left:50%;
-        }
-      }
-    }
-    a.active{
-      color:#e13e39;
-      span{
-        display: block;
-      }
-    }
-  }
-
-  .tabs-sec{
-    #sect_01{
-      display: none;
-      text-align: center;
-      height: 18.14rem;
-      background: url('../images/guagua/bg1.jpg') no-repeat 0 0/cover;
-      .adoptMoney{
-        margin-top: 5rem;
-        width:6.08rem;
-        height: 0.98rem;
-        border:1px solid #fff;
-        background-color: #f9da47;
-        border-radius:4px;
-        @include fontFormat($fz:0.48rem,$fc:#db0f39,$ta:center);
-        line-height:0.98rem;
-      }
-      .p0{
-        margin-top: 1.05rem;
-        @include fontFormat($fz:0.32rem,$fc:#fff,$ta:center);
-        span{
-          @include fontFormat($fz:0.36rem,$fc:#fff100);
-        }
-      }
-      .sect-row{
-        h2{
-          @include fontFormat($fz:0.32rem,$fc:#fff);
-          line-height:0.72rem;
-          padding-left: 0.2rem;
-        }
-        p{
-          @include fontFormat($fz:0.24rem,$fc:#ebb4ff);
-          line-height: 0.4rem;
-          margin-bottom: 0.1rem;
-          padding:0 0.2rem;
-        }
-      }
-      ul.li-4{
-        overflow: hidden;
-        margin:0 0.1rem;
-        width:7.3rem;
-        height: 1.5rem;
-        background: url("../images/guagua/li4.png") no-repeat 0 0 /cover;
-        li{
-          width:24%;
-          padding-top: 0.5rem;
-          float:left;
-          p{
-            @include fontFormat($fz:0.22rem,$fc:#fff,$ta:center);
-            line-height: 0.4rem;
-            padding: 0;
-          }
-          p.row-b{
-            font-size: 0.16rem;
-            color:#ebb4ff;
-            line-height:0.3rem;
-          }
-        }
-        li:last-child{
-          width:28%;
-        }
-      }
-    }
-    .list-info{
-      ul{
-        padding-top: 0.32rem;
-        background: url("../images/guagua/list_bg.png") no-repeat 0 0 /cover;
-        margin: 0.1rem auto;
-        width:6.26rem;
-        height:1.28rem;
-        li{
-          @include fontFormat($fz:0.24rem,$fc:#fff,$ta:center);
-          line-height: 0.44rem;
-        }
-      }
-    }
-    .sec-foot{
-      margin-top:0.5rem;
       p{
-        @include fontFormat($fz:0.24rem,$fc:#ebb4ff,$ta:center);
-        line-height:0.46rem;
+        @include fontFormat($fz:0.28rem,$fc:#3d4145,$ta:center,$wgt:bold);
+      }
+      p.price{
+        @include fontFormat($fz:0.48rem,$fc:#09F,$ta:center,$wgt:bold);
+      }
+      p.font-blue{
+        color: #09F;
+      }
+      p.font-s{
+        font-size:0.26rem;
+        margin-top: 0.05rem;
       }
     }
-    #sect_02{
-      display: block;
-      background: url("../images/guagua/bg2.jpg") no-repeat 0 -1.26rem /cover;
-      padding:6rem 0.3rem 2rem;
-      .guaguale{
-        height:3.55rem;
-        width:6.9rem;
-        background:url("../images/guagua/guagua.png") no-repeat 0 0/cover;
-        padding: 0.24rem 0.2rem;
-        .area{
-         //- background-color: #bdb0b3;
-          font-family:"宋体";
-          @include fontFormat($fz:0.48rem,$fc:#fff,$ta:center);
-          line-height:3.06rem;
-          text-align: center;
-          background:#fff;
-          position: relative;
-          width:100%;
-          height:100%;
-          canvas{
-            position: absolute;
-            left:0;
-            top:0;
-          }
-        }
+    .btn{
+      overflow: hidden;
+      margin-left: -4%;
+      margin-top:0.4rem;
+      a{width:46%;margin-left: 4%;border-radius:0.1rem;@include fontFormat($fz:0.26rem,$fc:#fff,$ta:center);height:0.5rem;line-height: 0.5rem}
+      a.blue-btn{
+        background-color:#0894ec;
       }
-      .num-page{
-        overflow: hidden;
-        line-height: 0.5rem;
-        margin-top:0.5rem;
-        span{
-          @include fontFormat($fz:0.32rem,$fc:#fff);
-          em{
-            padding: 0 0.05rem;
-            font-style:normal;
-            @include fontFormat($fz:0.36rem,$fc:#fff100);
-          }
-        }
-      }
-      .list-info {
-        margin-top: 0.2rem;
-        ul {
-          padding-top:0.3rem;
-          background: url("../images/guagua/list_bg2.png") no-repeat 0 0 /cover;
-        }
-      }
-      .opt-btn{
-        @include fontFormat($fz:0.24rem,$fc:#fff100,$ta:center);
-        line-height: 0.4rem;
-        padding: 0.1rem;
-        margin-top: 0.34rem;
-      }
-      .sec-foot{
-        margin-top: 0.2rem;
-        p{
-          color:#fff;
-        }
+      a.yellow-btn{
+        background-color:#F90;
       }
     }
   }
-
 }
 
+/*客户详情*/
+.customerDetail{
+  .sec{
+    $pl:0.2rem;
+    p{
+      @include fontFormat($fz:0.24rem,$fc:#6d6d72);
+      line-height: 0.56rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-left: $pl;
+    }
+    .bg-white{
+      background-color: #fff;
+      padding:0 $pl;
+    }
+    .form-row{
+      overflow: hidden;
+      font-size: 0.28rem;
+      line-height: 0.4rem;
+      border-bottom:1px solid #e8e8e8;
+      padding: 0.12rem 0.05rem;
+      label{
+        float:left;
+        color:#3d4145;
+        font-weight:bold;
+      }
+      .txt-wrap{
+        float:right;
+        color: #6d6d72;
+      }
+    }
+    .form-row:last-child{border-bottom: 0;}
+  }
+}
 
 

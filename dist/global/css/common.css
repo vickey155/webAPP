@@ -2,14 +2,17 @@
 html, body {
   width: 100%;
   overflow-x: hidden;
-  overflow-y: auto; }
+  overflow-y: auto;
+  background-color: #efeff4; }
 
-html * {
+* {
   box-sizing: border-box;
-  font-family: 'Hiragino Sans GB w6'; }
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.5; }
 
 body {
-  padding: 0; }
+  padding: 0;
+  color: #3d4145; }
 
 img, span, a {
   display: inline-block;
@@ -26,759 +29,144 @@ h1 {
 .fr {
   float: right; }
 
-/* index.html */
-.home-list {
-  margin: 2rem auto;
-  width: 3rem; }
-  .home-list li {
-    margin-bottom: 0.2rem; }
-    .home-list li a {
-      color: #333;
-      text-align: left;
-      line-height: 0.5rem;
-      text-decoration: underline; }
-      @media screen and (max-width: 321px) {
-        .home-list li a {
-          font-size: 0.3rem; }
-          .home-list li a span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 321px) and (max-width: 400px) {
-        .home-list li a {
-          font-size: 0.3rem; }
-          .home-list li a span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 400px) and (max-width: 640px) {
-        .home-list li a {
-          font-size: 0.3rem; }
-          .home-list li a span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 640px) {
-        .home-list li a {
-          font-size: 0.3rem; }
-          .home-list li a span.red_bg {
-            height: 0.36rem; } }
-
-/* pop home */
-header.col2 {
-  overflow: hidden; }
-  header.col2 div {
-    width: 50%;
-    float: left;
-    height: 1rem;
-    padding-top: 0.2rem;
-    padding-left: 0.2rem; }
-  header.col2 .log img {
-    width: 2.8rem; }
-  header.col2 .txt h1 {
-    color: #333;
-    text-align: right;
-    padding-right: 0.2rem;
-    line-height: 0.63rem;
-    font-family: 'Hiragino Sans GB'; }
-    @media screen and (max-width: 321px) {
-      header.col2 .txt h1 {
-        font-size: 0.24rem; }
-        header.col2 .txt h1 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      header.col2 .txt h1 {
-        font-size: 0.24rem; }
-        header.col2 .txt h1 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      header.col2 .txt h1 {
-        font-size: 0.24rem; }
-        header.col2 .txt h1 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      header.col2 .txt h1 {
-        font-size: 0.24rem; }
-        header.col2 .txt h1 span.red_bg {
-          height: 0.36rem; } }
-
-section.bg {
-  background-color: #f5f5f5;
-  padding-bottom: 0.01rem; }
-  section.bg .banner {
-    background-color: #eee;
+/* VIPapply.html */
+.vipsection {
+  min-height: 100%; }
+  .vipsection .banner {
     width: 100%;
-    height: 2.3rem;
-    position: relative;
-    border-bottom: 1px solid #ccc; }
-    section.bg .banner ul.ul_col1 li {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2; }
-  section.bg .sec_icons {
-    background-color: #fff; }
-    section.bg .sec_icons ul.ul_col3 {
-      overflow: hidden; }
-      section.bg .sec_icons ul.ul_col3 li {
-        width: 33%;
-        float: left;
-        padding-top: 0.18rem;
-        text-align: center; }
-        section.bg .sec_icons ul.ul_col3 li span {
-          width: 0.8rem;
-          height: 0.8rem;
-          background-color: #ccc;
-          -webkit-border-radius: 0.04rem;
-          -moz-border-radius: 0.04rem;
-          border-radius: 0.04rem; }
-        section.bg .sec_icons ul.ul_col3 li p {
-          color: #333;
-          text-align: center;
-          line-height: 0.4rem;
-          padding: 0.06rem 0; }
-          @media screen and (max-width: 321px) {
-            section.bg .sec_icons ul.ul_col3 li p {
-              font-size: 0.24rem; }
-              section.bg .sec_icons ul.ul_col3 li p span.red_bg {
-                height: 0.36rem; } }
-          @media screen and (min-width: 321px) and (max-width: 400px) {
-            section.bg .sec_icons ul.ul_col3 li p {
-              font-size: 0.24rem; }
-              section.bg .sec_icons ul.ul_col3 li p span.red_bg {
-                height: 0.36rem; } }
-          @media screen and (min-width: 400px) and (max-width: 640px) {
-            section.bg .sec_icons ul.ul_col3 li p {
-              font-size: 0.24rem; }
-              section.bg .sec_icons ul.ul_col3 li p span.red_bg {
-                height: 0.36rem; } }
-          @media screen and (min-width: 640px) {
-            section.bg .sec_icons ul.ul_col3 li p {
-              font-size: 0.24rem; }
-              section.bg .sec_icons ul.ul_col3 li p span.red_bg {
-                height: 0.36rem; } }
-  section.bg .sec_pic {
-    margin: 0.2rem 0;
-    background-color: #fff; }
-    section.bg .sec_pic .pic_list {
-      margin: 0 0.2rem;
-      padding-bottom: 0.2rem; }
-      section.bg .sec_pic .pic_list h1 {
-        color: #333;
+    height: 2.05rem;
+    background: #39F url("/global/images/LOOGO.png") no-repeat 50% 50%; }
+  .vipsection .sec {
+    padding: 0.4rem 0.2rem; }
+    .vipsection .sec .wrapper {
+      background: #fff;
+      box-shadow: 0 0.02rem 0.03rem rgba(0, 0, 0, 0.3);
+      border-radius: 0.04rem;
+      margin-bottom: 0.2rem;
+      text-align: center;
+      padding: 0.28rem 0.2rem; }
+      .vipsection .sec .wrapper h2 {
+        color: #3d4145;
         text-align: center;
-        line-height: 0.76rem;
-        text-align: left; }
+        font-weight: bold; }
         @media screen and (max-width: 321px) {
-          section.bg .sec_pic .pic_list h1 {
-            font-size: 0.32rem; }
-            section.bg .sec_pic .pic_list h1 span.red_bg {
-              height: 0.36rem; } }
+          .vipsection .sec .wrapper h2 {
+            font-size: 0.36rem; } }
         @media screen and (min-width: 321px) and (max-width: 400px) {
-          section.bg .sec_pic .pic_list h1 {
-            font-size: 0.32rem; }
-            section.bg .sec_pic .pic_list h1 span.red_bg {
-              height: 0.36rem; } }
+          .vipsection .sec .wrapper h2 {
+            font-size: 0.36rem; } }
         @media screen and (min-width: 400px) and (max-width: 640px) {
-          section.bg .sec_pic .pic_list h1 {
-            font-size: 0.32rem; }
-            section.bg .sec_pic .pic_list h1 span.red_bg {
-              height: 0.36rem; } }
+          .vipsection .sec .wrapper h2 {
+            font-size: 0.36rem; } }
         @media screen and (min-width: 640px) {
-          section.bg .sec_pic .pic_list h1 {
-            font-size: 0.32rem; }
-            section.bg .sec_pic .pic_list h1 span.red_bg {
-              height: 0.36rem; } }
-        section.bg .sec_pic .pic_list h1 span.red_bg {
-          width: 0.1rem;
-          height: 0.38rem;
-          background-color: #d32027;
-          margin-top: 0.18rem;
-          margin-right: 0.15rem; }
-      section.bg .sec_pic .pic_list ul {
-        overflow: hidden; }
-        section.bg .sec_pic .pic_list ul li {
-          position: relative;
-          min-height: 0.8rem;
-          float: left; }
-          section.bg .sec_pic .pic_list ul li img {
-            width: 100%; }
-          section.bg .sec_pic .pic_list ul li .txtstatu {
-            width: 100%;
-            height: 0.64rem;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: 2; }
-            section.bg .sec_pic .pic_list ul li .txtstatu .opac_bg {
-              background-color: #000;
-              opacity: 0.6;
-              filter: alpha(opacity=60);
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              z-index: 2;
-              width: 100%;
-              height: 100%;
-              z-index: 3; }
-            section.bg .sec_pic .pic_list ul li .txtstatu .txt {
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              z-index: 4;
-              padding: 0.01rem 0.08rem;
-              width: 100%; }
-              section.bg .sec_pic .pic_list ul li .txtstatu .txt p {
-                color: #fff;
-                text-align: left;
-                line-height: 0.3rem;
-                height: 0.3rem;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap; }
-                @media screen and (max-width: 321px) {
-                  section.bg .sec_pic .pic_list ul li .txtstatu .txt p {
-                    font-size: 0.2rem; }
-                    section.bg .sec_pic .pic_list ul li .txtstatu .txt p span.red_bg {
-                      height: 0.36rem; } }
-                @media screen and (min-width: 321px) and (max-width: 400px) {
-                  section.bg .sec_pic .pic_list ul li .txtstatu .txt p {
-                    font-size: 0.2rem; }
-                    section.bg .sec_pic .pic_list ul li .txtstatu .txt p span.red_bg {
-                      height: 0.36rem; } }
-                @media screen and (min-width: 400px) and (max-width: 640px) {
-                  section.bg .sec_pic .pic_list ul li .txtstatu .txt p {
-                    font-size: 0.2rem; }
-                    section.bg .sec_pic .pic_list ul li .txtstatu .txt p span.red_bg {
-                      height: 0.36rem; } }
-                @media screen and (min-width: 640px) {
-                  section.bg .sec_pic .pic_list ul li .txtstatu .txt p {
-                    font-size: 0.2rem; }
-                    section.bg .sec_pic .pic_list ul li .txtstatu .txt p span.red_bg {
-                      height: 0.36rem; } }
-      section.bg .sec_pic .pic_list ul.ul_col2 {
-        margin-left: -2%; }
-        section.bg .sec_pic .pic_list ul.ul_col2 li {
-          width: 48%;
-          margin-left: 2%; }
-      section.bg .sec_pic .pic_list ul.ul_col3 {
-        margin-left: -1%; }
-        section.bg .sec_pic .pic_list ul.ul_col3 li {
-          width: 32.1%;
-          margin-left: 1.2%; }
-      section.bg .sec_pic .pic_list ul.ul_col4 {
-        margin-left: -1%; }
-        section.bg .sec_pic .pic_list ul.ul_col4 li {
-          width: 24%;
-          margin-left: 1%;
-          background-color: #ccc; }
-
-footer ul {
-  overflow: hidden; }
-  footer ul li {
-    float: left;
-    overflow: hidden;
-    padding: 0.2rem 0;
-    text-align: center; }
-    footer ul li a {
-      color: #666;
-      text-align: center; }
-      @media screen and (max-width: 321px) {
-        footer ul li a {
-          font-size: 0.28rem; }
-          footer ul li a span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 321px) and (max-width: 400px) {
-        footer ul li a {
-          font-size: 0.28rem; }
-          footer ul li a span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 400px) and (max-width: 640px) {
-        footer ul li a {
-          font-size: 0.28rem; }
-          footer ul li a span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 640px) {
-        footer ul li a {
-          font-size: 0.28rem; }
-          footer ul li a span.red_bg {
-            height: 0.36rem; } }
-    footer ul li span.border-r {
-      width: 0.02rem;
-      height: 0.2rem;
-      background-color: #a0a0a0;
-      float: right;
-      margin-top: 0.1rem; }
-
-footer .ul_col3 {
-  border-bottom: 2px solid #a0a0a0; }
-  footer .ul_col3 li {
-    width: 33%; }
-
-footer .ul_col2 li {
-  width: 50%; }
-
-/*刮刮乐*/
-.title {
-  height: 0.7rem;
-  color: #fff;
-  text-align: left;
-  line-height: 0.7rem;
-  background-color: #e13e3f;
-  text-align: center; }
-  @media screen and (max-width: 321px) {
-    .title {
-      font-size: 0.32rem; }
-      .title span.red_bg {
-        height: 0.36rem; } }
-  @media screen and (min-width: 321px) and (max-width: 400px) {
-    .title {
-      font-size: 0.32rem; }
-      .title span.red_bg {
-        height: 0.36rem; } }
-  @media screen and (min-width: 400px) and (max-width: 640px) {
-    .title {
-      font-size: 0.32rem; }
-      .title span.red_bg {
-        height: 0.36rem; } }
-  @media screen and (min-width: 640px) {
-    .title {
-      font-size: 0.32rem; }
-      .title span.red_bg {
-        height: 0.36rem; } }
-  .title a {
-    color: #fff;
-    text-align: left;
-    line-height: 0.7rem;
-    float: left; }
-    @media screen and (max-width: 321px) {
-      .title a {
-        font-size: 0.28rem; }
-        .title a span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .title a {
-        font-size: 0.28rem; }
-        .title a span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .title a {
-        font-size: 0.28rem; }
-        .title a span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      .title a {
-        font-size: 0.28rem; }
-        .title a span.red_bg {
-          height: 0.36rem; } }
-  .title span {
-    margin-left: -0.5rem; }
-
-.tab-wrapper .tabs-a a {
-  color: #666;
-  text-align: center;
-  width: 50%;
-  line-height: 0.74rem;
-  height: 0.74rem;
-  position: relative; }
-  @media screen and (max-width: 321px) {
-    .tab-wrapper .tabs-a a {
-      font-size: 0.32rem; }
-      .tab-wrapper .tabs-a a span.red_bg {
-        height: 0.36rem; } }
-  @media screen and (min-width: 321px) and (max-width: 400px) {
-    .tab-wrapper .tabs-a a {
-      font-size: 0.32rem; }
-      .tab-wrapper .tabs-a a span.red_bg {
-        height: 0.36rem; } }
-  @media screen and (min-width: 400px) and (max-width: 640px) {
-    .tab-wrapper .tabs-a a {
-      font-size: 0.32rem; }
-      .tab-wrapper .tabs-a a span.red_bg {
-        height: 0.36rem; } }
-  @media screen and (min-width: 640px) {
-    .tab-wrapper .tabs-a a {
-      font-size: 0.32rem; }
-      .tab-wrapper .tabs-a a span.red_bg {
-        height: 0.36rem; } }
-  .tab-wrapper .tabs-a a span {
-    display: none;
-    position: absolute;
-    left: 0;
-    bottom: -0.01rem;
-    width: 100%;
-    height: 0.05rem;
-    background-color: #c41d3f; }
-    .tab-wrapper .tabs-a a span i {
-      width: 0;
-      height: 0;
-      border-left: 0.15rem solid transparent;
-      border-right: 0.15rem solid transparent;
-      border-bottom: 0.15rem solid #c41d3f;
-      position: absolute;
-      bottom: 0;
-      left: 50%; }
-
-.tab-wrapper .tabs-a a.active {
-  color: #e13e39; }
-  .tab-wrapper .tabs-a a.active span {
-    display: block; }
-
-.tab-wrapper .tabs-sec #sect_01 {
-  display: none;
-  text-align: center;
-  height: 18.14rem;
-  background: url("../images/guagua/bg1.jpg") no-repeat 0 0/cover; }
-  .tab-wrapper .tabs-sec #sect_01 .adoptMoney {
-    margin-top: 5rem;
-    width: 6.08rem;
-    height: 0.98rem;
-    border: 1px solid #fff;
-    background-color: #f9da47;
-    border-radius: 4px;
-    color: #db0f39;
-    text-align: center;
-    line-height: 0.98rem; }
-    @media screen and (max-width: 321px) {
-      .tab-wrapper .tabs-sec #sect_01 .adoptMoney {
-        font-size: 0.48rem; }
-        .tab-wrapper .tabs-sec #sect_01 .adoptMoney span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .tab-wrapper .tabs-sec #sect_01 .adoptMoney {
-        font-size: 0.48rem; }
-        .tab-wrapper .tabs-sec #sect_01 .adoptMoney span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_01 .adoptMoney {
-        font-size: 0.48rem; }
-        .tab-wrapper .tabs-sec #sect_01 .adoptMoney span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_01 .adoptMoney {
-        font-size: 0.48rem; }
-        .tab-wrapper .tabs-sec #sect_01 .adoptMoney span.red_bg {
-          height: 0.36rem; } }
-  .tab-wrapper .tabs-sec #sect_01 .p0 {
-    margin-top: 1.05rem;
-    color: #fff;
-    text-align: center; }
-    @media screen and (max-width: 321px) {
-      .tab-wrapper .tabs-sec #sect_01 .p0 {
-        font-size: 0.32rem; }
-        .tab-wrapper .tabs-sec #sect_01 .p0 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .tab-wrapper .tabs-sec #sect_01 .p0 {
-        font-size: 0.32rem; }
-        .tab-wrapper .tabs-sec #sect_01 .p0 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_01 .p0 {
-        font-size: 0.32rem; }
-        .tab-wrapper .tabs-sec #sect_01 .p0 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_01 .p0 {
-        font-size: 0.32rem; }
-        .tab-wrapper .tabs-sec #sect_01 .p0 span.red_bg {
-          height: 0.36rem; } }
-    .tab-wrapper .tabs-sec #sect_01 .p0 span {
-      color: #fff100;
-      text-align: left; }
-      @media screen and (max-width: 321px) {
-        .tab-wrapper .tabs-sec #sect_01 .p0 span {
-          font-size: 0.36rem; }
-          .tab-wrapper .tabs-sec #sect_01 .p0 span span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 321px) and (max-width: 400px) {
-        .tab-wrapper .tabs-sec #sect_01 .p0 span {
-          font-size: 0.36rem; }
-          .tab-wrapper .tabs-sec #sect_01 .p0 span span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 400px) and (max-width: 640px) {
-        .tab-wrapper .tabs-sec #sect_01 .p0 span {
-          font-size: 0.36rem; }
-          .tab-wrapper .tabs-sec #sect_01 .p0 span span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 640px) {
-        .tab-wrapper .tabs-sec #sect_01 .p0 span {
-          font-size: 0.36rem; }
-          .tab-wrapper .tabs-sec #sect_01 .p0 span span.red_bg {
-            height: 0.36rem; } }
-  .tab-wrapper .tabs-sec #sect_01 .sect-row h2 {
-    color: #fff;
-    text-align: left;
-    line-height: 0.72rem;
-    padding-left: 0.2rem; }
-    @media screen and (max-width: 321px) {
-      .tab-wrapper .tabs-sec #sect_01 .sect-row h2 {
-        font-size: 0.32rem; }
-        .tab-wrapper .tabs-sec #sect_01 .sect-row h2 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .tab-wrapper .tabs-sec #sect_01 .sect-row h2 {
-        font-size: 0.32rem; }
-        .tab-wrapper .tabs-sec #sect_01 .sect-row h2 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_01 .sect-row h2 {
-        font-size: 0.32rem; }
-        .tab-wrapper .tabs-sec #sect_01 .sect-row h2 span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_01 .sect-row h2 {
-        font-size: 0.32rem; }
-        .tab-wrapper .tabs-sec #sect_01 .sect-row h2 span.red_bg {
-          height: 0.36rem; } }
-  .tab-wrapper .tabs-sec #sect_01 .sect-row p {
-    color: #ebb4ff;
-    text-align: left;
-    line-height: 0.4rem;
-    margin-bottom: 0.1rem;
-    padding: 0 0.2rem; }
-    @media screen and (max-width: 321px) {
-      .tab-wrapper .tabs-sec #sect_01 .sect-row p {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec #sect_01 .sect-row p span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .tab-wrapper .tabs-sec #sect_01 .sect-row p {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec #sect_01 .sect-row p span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_01 .sect-row p {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec #sect_01 .sect-row p span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_01 .sect-row p {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec #sect_01 .sect-row p span.red_bg {
-          height: 0.36rem; } }
-  .tab-wrapper .tabs-sec #sect_01 ul.li-4 {
-    overflow: hidden;
-    margin: 0 0.1rem;
-    width: 7.3rem;
-    height: 1.5rem;
-    background: url("../images/guagua/li4.png") no-repeat 0 0/cover; }
-    .tab-wrapper .tabs-sec #sect_01 ul.li-4 li {
-      width: 24%;
-      padding-top: 0.5rem;
-      float: left; }
-      .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p {
+          .vipsection .sec .wrapper h2 {
+            font-size: 0.36rem; } }
+      .vipsection .sec .wrapper p {
+        color: #3d4145;
+        text-align: center;
+        font-weight: bold; }
+        @media screen and (max-width: 321px) {
+          .vipsection .sec .wrapper p {
+            font-size: 0.28rem; } }
+        @media screen and (min-width: 321px) and (max-width: 400px) {
+          .vipsection .sec .wrapper p {
+            font-size: 0.28rem; } }
+        @media screen and (min-width: 400px) and (max-width: 640px) {
+          .vipsection .sec .wrapper p {
+            font-size: 0.28rem; } }
+        @media screen and (min-width: 640px) {
+          .vipsection .sec .wrapper p {
+            font-size: 0.28rem; } }
+      .vipsection .sec .wrapper p.price {
+        color: #09F;
+        text-align: center;
+        font-weight: bold; }
+        @media screen and (max-width: 321px) {
+          .vipsection .sec .wrapper p.price {
+            font-size: 0.48rem; } }
+        @media screen and (min-width: 321px) and (max-width: 400px) {
+          .vipsection .sec .wrapper p.price {
+            font-size: 0.48rem; } }
+        @media screen and (min-width: 400px) and (max-width: 640px) {
+          .vipsection .sec .wrapper p.price {
+            font-size: 0.48rem; } }
+        @media screen and (min-width: 640px) {
+          .vipsection .sec .wrapper p.price {
+            font-size: 0.48rem; } }
+      .vipsection .sec .wrapper p.font-blue {
+        color: #09F; }
+      .vipsection .sec .wrapper p.font-s {
+        font-size: 0.26rem;
+        margin-top: 0.05rem; }
+    .vipsection .sec .btn {
+      overflow: hidden;
+      margin-left: -4%;
+      margin-top: 0.4rem; }
+      .vipsection .sec .btn a {
+        width: 46%;
+        margin-left: 4%;
+        border-radius: 0.1rem;
         color: #fff;
         text-align: center;
-        line-height: 0.4rem;
-        padding: 0; }
+        font-weight: normal;
+        height: 0.5rem;
+        line-height: 0.5rem; }
         @media screen and (max-width: 321px) {
-          .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p {
-            font-size: 0.22rem; }
-            .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p span.red_bg {
-              height: 0.36rem; } }
+          .vipsection .sec .btn a {
+            font-size: 0.26rem; } }
         @media screen and (min-width: 321px) and (max-width: 400px) {
-          .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p {
-            font-size: 0.22rem; }
-            .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p span.red_bg {
-              height: 0.36rem; } }
+          .vipsection .sec .btn a {
+            font-size: 0.26rem; } }
         @media screen and (min-width: 400px) and (max-width: 640px) {
-          .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p {
-            font-size: 0.22rem; }
-            .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p span.red_bg {
-              height: 0.36rem; } }
+          .vipsection .sec .btn a {
+            font-size: 0.26rem; } }
         @media screen and (min-width: 640px) {
-          .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p {
-            font-size: 0.22rem; }
-            .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p span.red_bg {
-              height: 0.36rem; } }
-      .tab-wrapper .tabs-sec #sect_01 ul.li-4 li p.row-b {
-        font-size: 0.16rem;
-        color: #ebb4ff;
-        line-height: 0.3rem; }
-    .tab-wrapper .tabs-sec #sect_01 ul.li-4 li:last-child {
-      width: 28%; }
+          .vipsection .sec .btn a {
+            font-size: 0.26rem; } }
+      .vipsection .sec .btn a.blue-btn {
+        background-color: #0894ec; }
+      .vipsection .sec .btn a.yellow-btn {
+        background-color: #F90; }
 
-.tab-wrapper .tabs-sec .list-info ul {
-  padding-top: 0.32rem;
-  background: url("../images/guagua/list_bg.png") no-repeat 0 0/cover;
-  margin: 0.1rem auto;
-  width: 6.26rem;
-  height: 1.28rem; }
-  .tab-wrapper .tabs-sec .list-info ul li {
-    color: #fff;
-    text-align: center;
-    line-height: 0.44rem; }
-    @media screen and (max-width: 321px) {
-      .tab-wrapper .tabs-sec .list-info ul li {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec .list-info ul li span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .tab-wrapper .tabs-sec .list-info ul li {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec .list-info ul li span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .tab-wrapper .tabs-sec .list-info ul li {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec .list-info ul li span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      .tab-wrapper .tabs-sec .list-info ul li {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec .list-info ul li span.red_bg {
-          height: 0.36rem; } }
+/*客户详情*/
+.customerDetail .sec p {
+  color: #6d6d72;
+  text-align: left;
+  font-weight: normal;
+  line-height: 0.56rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 0.2rem; }
+  @media screen and (max-width: 321px) {
+    .customerDetail .sec p {
+      font-size: 0.24rem; } }
+  @media screen and (min-width: 321px) and (max-width: 400px) {
+    .customerDetail .sec p {
+      font-size: 0.24rem; } }
+  @media screen and (min-width: 400px) and (max-width: 640px) {
+    .customerDetail .sec p {
+      font-size: 0.24rem; } }
+  @media screen and (min-width: 640px) {
+    .customerDetail .sec p {
+      font-size: 0.24rem; } }
 
-.tab-wrapper .tabs-sec .sec-foot {
-  margin-top: 0.5rem; }
-  .tab-wrapper .tabs-sec .sec-foot p {
-    color: #ebb4ff;
-    text-align: center;
-    line-height: 0.46rem; }
-    @media screen and (max-width: 321px) {
-      .tab-wrapper .tabs-sec .sec-foot p {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec .sec-foot p span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .tab-wrapper .tabs-sec .sec-foot p {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec .sec-foot p span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .tab-wrapper .tabs-sec .sec-foot p {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec .sec-foot p span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      .tab-wrapper .tabs-sec .sec-foot p {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec .sec-foot p span.red_bg {
-          height: 0.36rem; } }
+.customerDetail .sec .bg-white {
+  background-color: #fff;
+  padding: 0 0.2rem; }
 
-.tab-wrapper .tabs-sec #sect_02 {
-  display: block;
-  background: url("../images/guagua/bg2.jpg") no-repeat 0 -1.26rem/cover;
-  padding: 6rem 0.3rem 2rem; }
-  .tab-wrapper .tabs-sec #sect_02 .guaguale {
-    height: 3.55rem;
-    width: 6.9rem;
-    background: url("../images/guagua/guagua.png") no-repeat 0 0/cover;
-    padding: 0.24rem 0.2rem; }
-    .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
-      font-family: "宋体";
-      color: #fff;
-      text-align: center;
-      line-height: 3.06rem;
-      text-align: center;
-      background: #fff;
-      position: relative;
-      width: 100%;
-      height: 100%; }
-      @media screen and (max-width: 321px) {
-        .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
-          font-size: 0.48rem; }
-          .tab-wrapper .tabs-sec #sect_02 .guaguale .area span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 321px) and (max-width: 400px) {
-        .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
-          font-size: 0.48rem; }
-          .tab-wrapper .tabs-sec #sect_02 .guaguale .area span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 400px) and (max-width: 640px) {
-        .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
-          font-size: 0.48rem; }
-          .tab-wrapper .tabs-sec #sect_02 .guaguale .area span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 640px) {
-        .tab-wrapper .tabs-sec #sect_02 .guaguale .area {
-          font-size: 0.48rem; }
-          .tab-wrapper .tabs-sec #sect_02 .guaguale .area span.red_bg {
-            height: 0.36rem; } }
-      .tab-wrapper .tabs-sec #sect_02 .guaguale .area canvas {
-        position: absolute;
-        left: 0;
-        top: 0; }
-  .tab-wrapper .tabs-sec #sect_02 .num-page {
-    overflow: hidden;
-    line-height: 0.5rem;
-    margin-top: 0.5rem; }
-    .tab-wrapper .tabs-sec #sect_02 .num-page span {
-      color: #fff;
-      text-align: left; }
-      @media screen and (max-width: 321px) {
-        .tab-wrapper .tabs-sec #sect_02 .num-page span {
-          font-size: 0.32rem; }
-          .tab-wrapper .tabs-sec #sect_02 .num-page span span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 321px) and (max-width: 400px) {
-        .tab-wrapper .tabs-sec #sect_02 .num-page span {
-          font-size: 0.32rem; }
-          .tab-wrapper .tabs-sec #sect_02 .num-page span span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 400px) and (max-width: 640px) {
-        .tab-wrapper .tabs-sec #sect_02 .num-page span {
-          font-size: 0.32rem; }
-          .tab-wrapper .tabs-sec #sect_02 .num-page span span.red_bg {
-            height: 0.36rem; } }
-      @media screen and (min-width: 640px) {
-        .tab-wrapper .tabs-sec #sect_02 .num-page span {
-          font-size: 0.32rem; }
-          .tab-wrapper .tabs-sec #sect_02 .num-page span span.red_bg {
-            height: 0.36rem; } }
-      .tab-wrapper .tabs-sec #sect_02 .num-page span em {
-        padding: 0 0.05rem;
-        font-style: normal;
-        color: #fff100;
-        text-align: left; }
-        @media screen and (max-width: 321px) {
-          .tab-wrapper .tabs-sec #sect_02 .num-page span em {
-            font-size: 0.36rem; }
-            .tab-wrapper .tabs-sec #sect_02 .num-page span em span.red_bg {
-              height: 0.36rem; } }
-        @media screen and (min-width: 321px) and (max-width: 400px) {
-          .tab-wrapper .tabs-sec #sect_02 .num-page span em {
-            font-size: 0.36rem; }
-            .tab-wrapper .tabs-sec #sect_02 .num-page span em span.red_bg {
-              height: 0.36rem; } }
-        @media screen and (min-width: 400px) and (max-width: 640px) {
-          .tab-wrapper .tabs-sec #sect_02 .num-page span em {
-            font-size: 0.36rem; }
-            .tab-wrapper .tabs-sec #sect_02 .num-page span em span.red_bg {
-              height: 0.36rem; } }
-        @media screen and (min-width: 640px) {
-          .tab-wrapper .tabs-sec #sect_02 .num-page span em {
-            font-size: 0.36rem; }
-            .tab-wrapper .tabs-sec #sect_02 .num-page span em span.red_bg {
-              height: 0.36rem; } }
-  .tab-wrapper .tabs-sec #sect_02 .list-info {
-    margin-top: 0.2rem; }
-    .tab-wrapper .tabs-sec #sect_02 .list-info ul {
-      padding-top: 0.3rem;
-      background: url("../images/guagua/list_bg2.png") no-repeat 0 0/cover; }
-  .tab-wrapper .tabs-sec #sect_02 .opt-btn {
-    color: #fff100;
-    text-align: center;
-    line-height: 0.4rem;
-    padding: 0.1rem;
-    margin-top: 0.34rem; }
-    @media screen and (max-width: 321px) {
-      .tab-wrapper .tabs-sec #sect_02 .opt-btn {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec #sect_02 .opt-btn span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .tab-wrapper .tabs-sec #sect_02 .opt-btn {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec #sect_02 .opt-btn span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_02 .opt-btn {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec #sect_02 .opt-btn span.red_bg {
-          height: 0.36rem; } }
-    @media screen and (min-width: 640px) {
-      .tab-wrapper .tabs-sec #sect_02 .opt-btn {
-        font-size: 0.24rem; }
-        .tab-wrapper .tabs-sec #sect_02 .opt-btn span.red_bg {
-          height: 0.36rem; } }
-  .tab-wrapper .tabs-sec #sect_02 .sec-foot {
-    margin-top: 0.2rem; }
-    .tab-wrapper .tabs-sec #sect_02 .sec-foot p {
-      color: #fff; }
+.customerDetail .sec .form-row {
+  overflow: hidden;
+  font-size: 0.28rem;
+  line-height: 0.4rem;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0.12rem 0.05rem; }
+  .customerDetail .sec .form-row label {
+    float: left;
+    color: #3d4145;
+    font-weight: bold; }
+  .customerDetail .sec .form-row .txt-wrap {
+    float: right;
+    color: #6d6d72; }
+
+.customerDetail .sec .form-row:last-child {
+  border-bottom: 0; }

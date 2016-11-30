@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://m.sui.taobao.org/demos/form/icon-input -->
+<html class="pixel-ratio-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <title>工薪贷</title>   
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="http://m.sui.taobao.org/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">   
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <link rel="stylesheet" href="css/demos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-114x114.png">
+    <script src="js/zepto.js"></script>
+    <script src="js/config.js"></script>
+  </head>
+  <body class="">
+  <div class="page-group">
+  <div id="page-city-picker" class="page">
+  <header class="bar bar-nav">
+    <a class="button button-link button-nav pull-left back" href="index.html">
+      <span class="icon icon-left"></span>
+      返回
+    </a>
+    <h1 class="title">生意人贷</h1>
+  </header>
+  <div class="content native-scroll">
+  <div class="content">
+  <div class="content-block-title">请完善以下信息，以便我们为您制定专属贷款方案</div>
+    <div class="list-block">
+      <ul>
+        <!-- Text inputs -->
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">姓名</div>
+              <div class="item-input">
+                <input type="text" placeholder="请输入您的姓名">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">您的手机</div>
+              <div class="item-input">
+                <input type="number" placeholder="请输入您的手机号码">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">资金需求</div>
+              <div class="item-input">
+                <input type="text" placeholder="请选择您的资金需求" id='picker'>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">月均收入</div>
+              <div class="item-input">
+                <input type="text" placeholder="请选择您的房屋估值" id='money-picker'>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- Date -->
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">您的地址</div>
+              <div class="item-input">
+                <input type="text" placeholder="" id='city-picker' placeholder="请选择您所在的地区"/>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- Switch (Checkbox) -->
+        </ul>
+        <div>
+        
+       
+       <div class="list-block" style="margin-top:0.5rem ">
+       <ul>        
+          <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title ">信用卡<span><span class="seltip">(请选择)</span></div>
+                </div>
+              </div>
+            </li>
+             <li>
+                 <div class="content-block" style="margin:0;">
+                    <div class="row">
+                    <p class="col-40"><a href="#" class="button  "  >有信用卡 </a></p>
+                    <p class="col-40"><a href="#" class="button  button-dark"  >无信用卡</a></p>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+        </div>
+        
+       <div class="list-block" style="margin-top:-1.2rem">
+       <ul>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title ">POS机<span><span class="seltip">(请选择)</span></div>
+                 
+                </div>
+              </div>
+            </li>
+              <li>
+                 <div class="content-block" style="margin:0;">
+                    <div class="row">
+                    <p class="col-40"><a href="#" class="button  "  >有POS </a></p>
+                    <p class="col-40"><a href="#" class="button  button-dark"  >无POS</a></p>
+                    </div>
+                </div>
+
+            </li>
+         </ul>
+        </div>
+        
+       <div class="list-block"  style="margin:-1.2rem 0">
+       <ul>
+             <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title ">营业执照<span><span class="seltip">(请选择)</span></div>
+                </div>
+              </div>
+            </li>
+              <li>
+                 <div class="content-block" style="margin:0;">
+                    <div class="row">
+                     <p class="col-40"><a href="#" class="button "  >有营业执照 </a></p>
+                     <p class="col-40"><a href="#" class="button  button-dark"  >无营业执照</a></p>
+                    </div>
+                </div>
+
+            </li>
+         </ul>
+        </div>
+          <div class="content-block">
+    <div class="searchbar row">
+        <div class="search-input col-60">
+          <input type="number" placeholder='输入验证码' style="background-color: #fff;border: 1px solid #b4b4b4;border-radius: 0.25rem;"/>
+        </div>
+         <div class="col-40">
+         <button  type="button" class="button button-fill button-primary "  id="btngetsms" name="btngetsms"  onclick="settime();"><span id="smsspan">获取短信验证码</span></button>
+      </div>
+      </div>
+    </div> 
+    
+    
+    <div class="content-block">
+        <p><a href="Submit successfully.html" class="button button-fill open-panel" data-panel='#panel-left-demo'>提交</a></p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+    <script src="js/sm.js"></script>
+    <script src="js/sm-extend.js"></script>
+    <script src="js/sm-city-picker.js"></script>
+    <script src="js/demos.js"></script>
+  
+<script type="text/javascript">  
+        $('#btngetsms').removeAttr("disabled");		
+		var countdown=60; 
+		function settime() {          	    
+			if (countdown == 0) { 			 
+				$('#btngetsms').removeAttr("disabled");				
+				$('#btngetsms').css('background-color', '#0894ec');
+				$('#smsspan').html("免费获取验证码");
+				countdown = 60; 
+				return;
+			} else { 		
+			    countdown--; 	 
+				$('#btngetsms').attr("disabled",true); 
+				var t=countdown+"秒后重新发送"; 
+				$('#smsspan').html(t);
+				t=null;
+				$('#btngetsms').css('background-color', '#ccc');
+			} 
+		setTimeout(function() { 
+			settime() }
+			,1000) 
+		} 
+</script>
+
+</body></html>

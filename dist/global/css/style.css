@@ -1,0 +1,21 @@
+a,div,ul,li,h1{display:block;margin:0;padding:0;}
+@charset "utf-8";
+/* CSS Document */
+@font-face
+{
+font-family: myFirstFont;
+src:url(../fonts/%E9%94%90%E5%AD%97%E4%BA%91%E5%AD%97%E5%BA%93%E9%94%90%E9%BB%91%E7%B2%97%E4%BD%93GBK.TTF);
+}
+img{display:block;}
+.item-title{font-weight:bold;}
+.item-after{color:#eb1919;}
+.item-text span{color:#ea8010;font-weight:bold;}
+.item-subtitle{font-weight:bold;}
+.bg{background-image:url(../img/user-money-bg.jpg);height:300px;width:100%}
+.Head-portrait{width:100px;height:100px;background-color:#666;border-radius:50% 50% 50% 50%;margin-left:auto;margin-right:auto;margin-top:20px;}
+.VIP-banner{background-color:#39F;height:120px;width:100%;background-image:url(../img/LOOGO.png);background-repeat:no-repeat;background-position:50% 50%}
+.swiper-banner{overflow:hidden;}
+.xd-bg{background-image:url(../img/user-money-bg1.jpg);height:300px;width:100%}
+.h3{margin:0;}
+.picker-items-col-normal{font-size:12px;}
+.picker-items-col-wrapper{font-size:12px;}
