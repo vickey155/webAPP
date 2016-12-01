@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+html
+  head
+    meta(charset='utf-8')
+    meta(name='Keywords',content='')
+    meta(name='Description',content='')
+    meta(name='viewport',content='width=device-width,initial-scale=1,maximum-scale=1')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+    title 工薪贷
+    link(rel='shortcut icon',href='/favicon.ico')
+    link(rel="stylesheet" href="/global/css/reset.css")
+    link(rel="stylesheet" href="/global/css/common.css")
+    script.
+      document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
+  body
+    section
+      .sec
+        p 请完善以下信息，以便我们为您制定专属贷款方案
+        form.valid-form
+          div.bg-white
+            div.form-row
+              label 姓名
+              input(type="text" placeholder="请输入您的姓名")
+            div.form-row
+              label 您的手机
+              input(type="text" placeholder="请输入您的手机号码")
+            div.form-row
+              label 资金需求
+              input(type="text" placeholder="请选择您的资金需求")
+            div.form-row
+              label 爱车估值
+              input(type="text" placeholder="请选择您的爱车估值")
+            div.form-row
+              label 您的地址
+              input(type="text" placeholder="请输入您的地址")
+            div.form-row
+              label 用款时间
+              input(type="text" placeholder="请选择您的用款时间")
+          div.bg-white.wrap-s
+            .title  工资发放形式
+              span (请选择)
+            .btn-a
+              a.active 打卡工资
+              a 现金发放
+          div.bg-white
+            div.form-row.last-row
+              input(type="text" class="varityCode" placeholder="请输入验证码")
+              a.codeBtn 获取短信验证码
+        a.submit-a 提交
+
+
+
+
+
+
+
+
+
+

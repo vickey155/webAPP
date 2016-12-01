@@ -59,7 +59,7 @@ img {
 
 input:-webkit-autofill,textarea:-webkit-autofill, select:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
 
-input::-webkit-input-placeholder {color: #ccc !important; /* WebKit browsers */  }
+input::-webkit-input-placeholder {color: #999 !important; /* WebKit browsers */  }
 input::-moz-placeholder { color: #999 !important; /* Mozilla Firefox 4 to 18 */  }
 input:-moz-placeholder {color: #999 !important;/* / Mozilla Firefox 19+ /*/  }
 input:-ms-input-placeholder { color: #999 !important; /*/ Internet Explorer 10+ *!*/}
