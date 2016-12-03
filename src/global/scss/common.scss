@@ -9,6 +9,7 @@ h1{font-weight:normal;margin:0; padding:0;}
 $white:#fff;
 $defaultC:#3d4145;
 $c3:#333;
+$blue:#0894ec;
 @mixin opacity_bg($opa:0.8,$col:#000){
   background-color: $col;
   opacity: $opa;
@@ -18,32 +19,18 @@ $c3:#333;
   bottom:0;
   z-index: 2;
 }
-@mixin lineHeight($val:1rem){
-  @media screen and (max-width: 321px) {
-    line-height:$val;
-  }
-  @media screen and (min-width: 321px) and (max-width:400px) {
-    line-height:$val;
-  }
-  @media screen and (min-width: 400px) and(max-width:640px) {
-    line-height:$val ;
-  }
-  @media screen and (min-width: 640px) {
-    line-height:$val ;
-  }
-}
 @mixin fontSize($val:1rem){
   @media screen and (max-width: 321px) {
     font-size:$val;
   }
   @media screen and (min-width: 321px) and (max-width:400px) {
-    font-size:$val;
+    font-size:$val + 0.02rem;
   }
   @media screen and (min-width: 400px) and(max-width:640px) {
-    font-size:$val ;
+    font-size:$val + 0.04rem;;
   }
   @media screen and (min-width: 640px) {
-    font-size:$val ;
+    font-size:$val + 0.06rem;;
   }
 }
 @mixin fontFormat($fz:1rem,$fc:$defaultC,$ta:left,$wgt:normal){
@@ -54,29 +41,13 @@ $c3:#333;
     font-size:$fz;
   }
   @media screen and (min-width: 321px) and (max-width:400px) {
-    font-size:$fz;
+    font-size:$fz + 0.01rem;
   }
   @media screen and (min-width: 400px) and(max-width:640px) {
-    font-size:$fz + 0.01rem;
+    font-size:$fz + 0.02rem;
   }
   @media screen and (min-width: 640px) {
     font-size:$fz + 0.04rem ;
-  }
-}
-@mixin height($height:$height){
-  height: $height;
-
-  @media screen and (max-width: 321px) {
-    line-height:$height + 0.02rem  ;
-  }
-  @media screen and (min-width: 321px) and (max-width:400px) {
-    line-height:$height + 0.02rem ;
-  }
-  @media screen and (min-width: 400px) and(max-width:640px) {
-    line-height:$height + 0.02rem ;
-  }
-  @media screen and (min-width: 640px) {
-    line-height:$height + 0.01rem ;
   }
 }
 
@@ -131,7 +102,7 @@ $c3:#333;
 /*表单格式*/
 $pl:0.2rem;
 .sec{
-  padding-bottom: 0.6rem;
+  padding-bottom: 0.8rem;
   p{
     @include fontFormat($fz:0.24rem,$fc:#6d6d72);
     line-height: 0.6rem;
@@ -157,36 +128,104 @@ $pl:0.2rem;
     float:left;
     color:#3d4145;
     font-weight:bold;
-    width:2.05rem;
-    @include height($height:$heival);
+    width:2.2rem;
+    padding: 0.08rem 0;
   }
   .txt-wrap{
     float:right;
     color: #6d6d72;
-    @include height($height:$heival);
-    @include lineHeight($val:0.52rem);
+    padding: 0.08rem 0;
   }
   input[type=text]{
     font-size: 0.28rem;
-    @include height($height:$heival);
-    border: 0;
+    padding: 0.08rem 0;
+    border: 0.01rem solid transparent;
     border-radius: 0.07rem;
     padding-left: 0.1rem;
+    width: 3.5rem;
+    color: $defaultC;
   }
+  input[type=date]{
+    font-size: 0.28rem;
+    padding: 0.08rem 0;
+    border: 0.01rem solid transparent;
+    border-radius: 0.07rem;
+    padding-left: 0.1rem;
+    width: 3.5rem;
+    background: none;
+    color: $defaultC;
+  }
+  input[type=file]{
+    font-size: 0;
+    padding: 0.08rem 0;
+    border: 0.01rem solid transparent;
+    border-radius: 0.07rem;
+    padding-left: 0.1rem;
+    width: 3.5rem;
+    background: none;
+    color: $defaultC;
+
+  }
+  .opacity{
+    opacity: 0;
+  }
+  .inputFile{
+    display: inline-block;
+    position: relative;
+  }
+  .inputFile input[type=file]{
+    position: absolute;
+    top: 0;
+    left:0;
+  }
+  .inputFile:before{
+    color:#A9A9A9;
+    content:attr(placeholder);
+  }
+  .full:before {
+    color:black;
+    content:""!important;
+  }
+
   input.varityCode{
     border:1px solid #b4b4b4;
     background-color: #fff;
+    width: 3.2rem;
+  }
+  select{
+    padding-left: 0.1rem;
+    background:none;
+    border: 1px solid transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    @include fontFormat($fz:0.3rem,$fc:$defaultC,$ta:center);
+    color: #999;
+  }
+  select.selected{
+    color:$defaultC;
+  }
+  .selectM{
+    width:3.6rem;
+  }
+  .select-wrapper{
+    display: inline-block;
+     .selectS{
+       width:1.1rem;
+     }
   }
 }
 .form-row:last-child{border-bottom: 0;}
+.btn-radius{
+  border-radius:0.08rem;
+}
 .btn-a{
   a{
     padding:0 0.6rem;
     border-radius:0.1rem;
     border:1px solid #6e727b;
     @include fontFormat($fz:0.24rem,$fc:#5f646e,$ta:center);
-    @include height($height:0.5rem);
-    @include lineHeight($val:0.5rem);
+    padding: 0.16rem 0;
     margin-right: 0.3rem;
   }
 }
@@ -197,7 +236,7 @@ $pl:0.2rem;
   border:1px solid #0894ec;
   background-color: #0894ec;
   @include fontFormat($fz:0.24rem,$fc:#fff,$ta:center);
-  @include height($height:0.48rem);
+  padding: 0.12rem 0;
 }
 form{
   .bg-white{
@@ -209,11 +248,11 @@ form{
       font-size: 0.28rem;
       margin-bottom: 0.2rem;
       border-bottom: 1px solid #e8e8e8;
-      @include height($height:0.8rem);
+      line-height: 0.8rem;
       span{
         font-weight:normal;
         color: #999;
-        @include height($height:0.8rem);
+        line-height: 0.8rem;
       }
     }
     .codeBtn{
@@ -247,6 +286,14 @@ form{
   width: $w;
   margin-left:(100%-$w)/2;
   margin-top: 0.2rem;
+  @include fontSize($val:0.24rem);
+  padding: 0.04rem 0;
+}
+/*右侧箭头*/
+.arrow{
+  width: 0.16rem;
+  height: 0.28rem;
+  background: url("/global/images/sel.png") no-repeat 0 0/cover;
 }
 /*客户详情*/
 .customerDetail{
@@ -296,9 +343,7 @@ form{
           line-height:0.4rem;
         }
         .a-arrow{
-          width: 0.16rem;
-          height: 0.28rem;
-          background: url("/global/images/sel.png") no-repeat 0 0/cover;
+          @extend .arrow;
           position: absolute;
           top:0.25rem;
           right: 0.1rem;
@@ -341,8 +386,8 @@ form{
           width: $h;
           border-radius: 50%;
           background-color: red;
-          @include fontFormat($fc:#fff,$ta:center,$fz:0.12rem);
-          @include height($height:$h);
+          @include fontFormat($fc:#fff,$ta:center,$fz:0.18rem);
+          line-height: $h+0.01rem;
           font-style: normal;
           position: absolute;
           top:-0.16rem;
@@ -355,8 +400,7 @@ form{
         padding: 0;
         text-align: center;
         font-size: 0.2rem;
-        line-height: 0.4rem;
-        margin-top: 0.05rem;
+
       }
       a.active{
         .trangle{
@@ -386,7 +430,11 @@ form{
     }
   }
 
+  .sec-hide{
+    display: none;
+  }
 }
+
 
 /*myCustomer*/
 .tap-wrapper{
@@ -432,6 +480,343 @@ form{
       margin: 0;
       @include fontFormat($fz:0.26rem,$fc:#6d6d72);
       padding:0.15rem 0 0.15rem 0.22rem;
+    }
+  }
+}
+/*个人中心*/
+.personCenter{
+  .banner {
+    width: 100%;
+    height: 5.12rem;
+    background: url('/global/images/user-money-bg.jpg') no-repeat 0 0;
+    .row-t{
+      padding-top:0.4rem;
+      text-align: center;
+      .avater{
+        border-radius: 50%;
+        background-color: #666;
+        height: 1.7rem;
+        width:1.7rem;
+        border: 0;
+        text-align: center;
+      }
+      p{
+        @include fontFormat($fz:0.34rem,$fc:#3d4145,$ta:center,$wgt:bold);
+        line-height: 0.4rem;
+      }
+      p.name{
+        margin-top: 0.18rem;
+      }
+      p.inviteCode{
+        font-size: 0.26rem;
+        span{
+          font-size: 0.26rem;
+        }
+      }
+    }
+    .row-b{
+      overflow: hidden;
+      margin-top: 0.3rem;
+      li{
+        float:left;
+        width: 50%;
+      }
+      p{
+        @include fontFormat($fz:0.34rem,$fc:#fff,$ta:center,$wgt:bold);
+        line-height: 0.5rem;
+      }
+      p.money{
+        font-size: 0.38rem;
+        margin-bottom: 0.05rem;
+        font-weight: bolder;
+      }
+    }
+  }
+  .bg-white{
+    margin-top: 0.3rem;
+    ul{
+      overflow: hidden;
+      li{
+        padding: 0.05rem 0;
+        position: relative;
+        border-bottom: 1px solid #eee;
+        a{
+          width: 100%;
+          padding-right: 0.3rem;
+          @include fontFormat($fz:0.3rem,$fc:#0894ec,$wgt:bold);
+          line-height: 0.6rem;
+          span{
+            font-weight: normal;
+            line-height: 0.6rem;
+            color:#5f646e;
+            float: right;
+          }
+          em.arrow{
+            @extend .arrow;
+            position: absolute;
+            top:0.2rem;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+header{
+  p{
+    @include fontFormat($fz:0.28rem,$fc:#3d4145,$ta:center);
+    line-height: 0.5rem;
+    padding: 0.1rem;
+    background-color: #f7f7f7;
+    position: relative;
+    .goback{
+      position: absolute;
+      top: 0.15rem;
+      left: 0;
+      color: #0894ec;
+      padding-left: 0.3rem;
+    }
+  }
+}
+
+
+/*充值按钮*/
+.recharge-btn{
+  padding: 0 0.25rem;
+  a{
+    width: 100%;
+    @extend .btn-radius;
+    @include fontFormat($fz:0.25rem,$fc:#fff,$ta:center);
+    line-height: 0.48rem;
+    margin-top: 0.65rem;
+  }
+  a.a-btn-blue{
+    background-color: #09F;
+  }
+  a.a-btn-red{
+    background-color: #F00;
+  }
+  a.a-btn-green{
+    background-color: #0C0;
+  }
+  a.a-btn-orange{
+    background-color: #F60;
+  }
+}
+/*充值页面*/
+.recharge{
+  @extend  .recharge-btn
+}
+
+/*.VIPapply*/
+.VIPapply{
+  div{
+    width: 100%;
+    height:2.8rem;
+  }
+  .banner{
+    background:url('/global/images/banner.jpg') no-repeat 0 0 /cover;
+  }
+  .sec01{
+    background:url('/global/images/jiage.jpg') no-repeat 0 0 /cover;
+  }
+  .sec02{
+    background:url('/global/images/js.jpg') no-repeat 0 0 /cover;
+  }
+  .submit-a{
+    margin-top: 0.7rem;
+    line-height: 0.46rem;
+  }
+}
+
+/*提交成功*/
+.submitSuccess{
+  .banner{
+    width: 100%;
+    height: 5.12rem;
+    background: url('/global/images/user-money-bg.jpg') no-repeat 0 0;
+    text-align: center;
+    h1{
+      @include fontFormat($fz:0.4rem,$fc:$defaultC,$ta:center,$wgt:bold);
+      line-height: 0.8rem;
+    }
+    .hightest{
+      margin-top: 0.2rem;
+      p{
+        @include fontFormat($fz:0.34rem,$fc:#fff,$ta:center,$wgt:bold);
+        line-height: 0.6rem;
+      }
+      p.money{
+        font-size:0.55rem;
+      }
+    }
+    .payDate{
+      margin-top: 0.55rem;
+      p{
+        @include fontFormat($fz:0.24rem,$fc:$defaultC,$ta:center,$wgt:bold);
+        line-height: 0.4rem;
+      }
+    }
+  }
+  .wrapper{
+    padding-top:0.1rem;
+    .submit-a{margin-top: 0.1rem}
+  }
+}
+
+/*信贷员中心*/
+.creditOfficer{
+  .banner{
+    background-image: url('/global/images/user-money-bg1.jpg');
+  }
+
+  .recharge-btn{
+    a.a-btn-orange{
+      background-color: #F60;
+      margin-top: 0.3rem;
+    }
+  }
+  .bg-white{
+    margin-top: 0.4rem;
+  }
+}
+/* 信贷员的 我的客户 */
+.credit-myCustomer{
+  .select-filter{
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0.2rem 0;
+     select{
+       width:33% ;
+       float: left;
+       background:none;
+       border: 1px solid transparent;
+       appearance: none;
+       -webkit-appearance: none;
+       outline: none;
+       @include fontFormat($fz:0.3rem,$fc:$defaultC,$ta:center);
+       padding-left:10%;
+       color: #999;
+     }
+  }
+  .sec-content{
+    padding: 0.6rem 0.15rem;
+  }
+  .per-page{
+    background-color: #fff;
+    border-radius:0.05rem;
+    box-shadow: 0 0.02rem 0.02rem rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.2rem;
+    padding:0.2rem 0;
+    p{
+      margin: 0;
+      @include fontFormat($fz:0.26rem,$fc:#6d6d72);
+      padding:0.15rem 0.25rem 0;
+    }
+    table{
+      width: 94%;
+      margin:0.2rem 3%;
+      display: table;
+      table-layout: fixed;
+      th,td{
+        vertical-align: top;
+        @include fontFormat($fz:0.26rem,$fc:#666,$wgt:bold);
+        line-height: 0.34rem;
+        padding:0.15rem 0;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+
+    }
+    .view-detail{
+      border-top:1px solid #efeff4;
+      height: 0.6rem;
+      a{
+        float: right;
+        @include fontFormat($fz:0.24rem,$fc:$blue);
+        line-height: 0.85rem;
+        margin-right: 0.3rem;
+      }
+    }
+  }
+}
+
+/*信用卡*/
+.creditCard{
+  p.title{
+    color:#363636;
+    font-size: 0.28rem;
+    text-align: center;
+    padding: 0.15rem 0;
+    background-color: #fff;
+    border-bottom:1px solid #ebebea;
+  }
+  .card-list{
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+    li{
+      float:left;
+      width: 50%;
+      border-right:1px solid #ebebea;
+      border-bottom:1px solid #ebebea;
+      overflow: hidden;
+      padding:0.2rem 0.25rem;
+    }
+    .col-l{
+      float: left;
+      height: 100%;
+      padding-right: 0.1rem;
+       img{
+         width: 0.7rem;
+         height:0.7rem;
+         vertical-align: middle;
+         margin-top: 0.05rem;
+       }
+    }
+    .col-r{
+       p.row-t{
+         float: left;
+         font-size: 0.3rem;
+         color:$c3;
+         line-height:0.42rem;
+         span.hot-red{
+           width:0.56rem;
+           height:0.32rem;
+           text-align: center;
+           font-size:0.18rem;
+           color: #ff302e;
+           border: 0.01rem solid #ff302e;
+           border-radius: 0.02rem;
+           margin-left: 0.05rem;
+           line-height: 0.3rem;
+         }
+       }
+      p.row-b{
+        font-size: 0.23rem;
+        color:#999;
+        line-height:0.42rem;
+      }
+    }
+  }
+  .view-process{
+
+    p{
+       @include fontFormat($fz:0.3rem,$fc:$c3);
+      line-height: 0.4rem;
+      padding: 0.2rem 0.25rem;
+      position: relative;
+      .oclok-icon{
+        width: 0.38rem;
+        height: 0.38rem;
+        margin-right: 0.25rem;
+        margin-top: 0.02rem;
+        background: url('/global/images/clock.png') no-repeat 0 0/cover;
+      }
+      .arrow{
+        float: right;
+        margin-top: 0.1rem;
+      }
     }
   }
 }

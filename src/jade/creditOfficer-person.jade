@@ -1,0 +1,71 @@
+extends layout/layout
+
+block append headTitle
+  title 信贷员中心
+
+block content
+  section.personCenter.creditOfficer
+    .banner
+      .row-t
+        span.avater
+          img(src="")
+        p.name T-mac
+        p.inviteCode  我的邀请码：
+          span.code 1867895241
+      div.row-b
+        p.money ￥0
+        p 账户余额
+
+
+    .sec
+      .recharge-btn
+        a.a-btn-orange  立即充值
+
+      div.bg-white
+        ul
+          li
+            a.ele-row(href="") 我的客户
+              span 立即查询
+              em.arrow
+          li
+            a.ele-row(href="") 我的推广客户
+              span 立即查询
+              em.arrow
+          li
+            a.ele-row(href="") 推广海报
+              span 立即推广
+              em.arrow
+          li
+            a.ele-row(href="") 推广区域设置
+              span 立即设置
+              em.arrow
+
+
+
+    .fixed-footer
+      ul
+        li
+          a(href="")
+            span.trangle
+            p 我的客户
+        li
+          a(href="")
+            span.trangle
+              em 2
+            p 购买客户
+        li
+          a.active(href="")
+            span.trangle
+              em 9
+            p 信贷员中心
+
+
+
+
+
+
+
+
+
+
+

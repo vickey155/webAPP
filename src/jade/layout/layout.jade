@@ -1,23 +1,22 @@
 doctype html
 html
   head
-    meta(charset='utf-8')
-    meta(name='Keywords',content='')
-    meta(name='Description',content='')
-    meta(name='viewport',content='width=device-width,initial-scale=1,maximum-scale=1')
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    meta(http-equiv="Cache-Control" content="no-transform")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(content="black" name="apple-mobile-web-app-status-bar-style")
     meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
-    title 活动
+    block headTitle
     link(rel='shortcut icon',href='/favicon.ico')
     block headCss
       link(rel="stylesheet" href="/global/css/reset.css")
       link(rel="stylesheet" href="/global/css/common.css")
+      script(type="text/javascript" src="/global/js/jquery.min.js")
+      script(type="text/javascript" src="/global/js/jquery.regionSelect.js")
+      script(type="text/javascript" src="/global/js/common.js")
     script.
       document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
   body
-    include ../temp/head
 
     block content
-
-    include ../temp/foot
-
-    include ../temp/foot_js

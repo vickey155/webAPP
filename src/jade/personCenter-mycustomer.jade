@@ -1,0 +1,48 @@
+
+extends layout/layout
+
+block append headTitle
+  title VIP申请
+
+block content
+  section.myCustomer
+    .sec
+      .tap-wrapper
+        .tab-btn
+          a.active 全部
+          a 关注未购买
+          a 已购买
+        .tab-content
+          .tab-cont
+            .per-page
+              h1 T-Mac
+              p  关注时间：2016/9/18 16:34:33
+            .per-page
+              h1 T-Mac
+                span.font-red  已购买：收益10元
+              p  关注时间：2016/9/18 16:34:33
+
+    .fixed-footer
+      ul
+        li
+          a
+            span.trangle
+            p 首页
+        li
+          a.active
+            span.trangle
+              em 2
+            p 我的客户
+        li
+          a
+            span.trangle
+              em 9
+            p 个人中心
+
+
+
+
+
+
+
+

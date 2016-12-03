@@ -1,0 +1,39 @@
+
+extends layout/layout
+
+block append headTitle
+  title 信贷员认证
+
+block content
+  section
+    .sec
+      p 请完善以下信息，以便我们认证您的信贷员身份
+      form.valid-form
+        div.bg-white
+          div.form-row
+            label 姓名
+            input(type="text" placeholder="请输入您的姓名")
+          div.form-row
+            label 您的手机
+            input(type="text" placeholder="请输入您的手机号码")
+          div.form-row
+            label 所在机构名称
+            input(type="text" placeholder="请选择您的所在机构名称")
+          div.form-row
+            label 您的地址
+            input(type="text" placeholder="请输入您的地址")
+          div.form-row
+            label 您的工号牌
+            .inputFile(placeholder="上传图片")
+              input(type="file" placeholder="上传图片").opacity
+
+      a.submit-a 提交
+
+
+
+
+
+
+
+
+

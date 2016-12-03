@@ -4,12 +4,25 @@ body, ul, li, h1, h2, h3, h4, p, input,textarea, strong, dl, dt, dd {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
-a, a:hover {
+a, a:hover,a:visited {
   text-decoration: none;
   outline:none;
+  -webkit-tap-highlight-color:rgba(255,0,0,0);
+  -webkit-touch-callout:none;
 }
+
+select, select:hover,select:visited {
+  text-decoration: none;
+  outline:none;
+  -webkit-tap-highlight-color:rgba(255,0,0,0);
+  -webkit-touch-callout:none;
+}
+
 
 ul, li {
   list-style: none;
@@ -24,23 +37,19 @@ input:-webkit-autofill {
   background-color: #fff;
   background-image: none;
 }
+
+input[type="date"]:before{
+  color:#A9A9A9;
+  content:attr(placeholder);
+}
+input[type="date"].full:before {
+  color:black;
+  content:""!important;
+}
+
 img {
   border: none;
   vertical-align: middle;
-}
-
-.clearfix:after {
-  clear: both;
-  content: ".";
-  display: block;
-  font-size: 0;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
-}
-
-.clearfix {
-  *zoom: 1;
 }
 
 .cf:after {
