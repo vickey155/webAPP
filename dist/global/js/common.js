@@ -88,15 +88,18 @@ $(function () {
 
         myScroll.on("slideDown", function () {
             if (this.y > 40) {
-                alert("slideDown");
                 upIcon.removeClass("reverse_icon");
+
+                alert("slideDown");
             }
         });
 
         myScroll.on("slideUp", function () {
             if (this.maxScrollY - this.y > 40) {
-                alert("slideUp");
                 upIcon.removeClass("reverse_icon");
+                //ajax请求
+                // 要 myScroll.refresh();
+                alert("slideUp");
             }
         });
     }

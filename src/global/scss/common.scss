@@ -327,6 +327,7 @@ form{
     p{
       @include fontFormat($fz:0.24rem,$fc:#6d6d72);
       line-height: 0.6rem;
+      margin-top: 0.2rem;
     }
     .div-wrapper{
       display: block;
@@ -343,10 +344,12 @@ form{
       }
       .contont{
         position: relative;
+        padding-bottom:0.1rem;
         p{
           @include fontFormat($fz:0.28rem,$fc:#333);
           line-height: 0.46rem;
           padding: 0;
+          margin-top: 0.1rem;
         }
         p.font-bold{
           font-weight: bold;
@@ -354,7 +357,7 @@ form{
         p.font-color{
           font-weight: bold;
           color: #ea8010;
-          line-height:0.4rem;
+          line-height:0.36rem;
         }
         .a-arrow{
           @extend .arrow;
@@ -851,5 +854,7 @@ header{
         padding-bottom: 0;
       }
    }
-
+  #scroller-pullUp,#scroller-pullDown{
+    border: 0;
+  }
 }

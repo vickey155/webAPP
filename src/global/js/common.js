@@ -94,15 +94,19 @@ $(function () {
 
         myScroll.on("slideDown",function(){
             if(this.y > 40){
+                upIcon.removeClass("reverse_icon");
+
                 alert("slideDown");
-                upIcon.removeClass("reverse_icon")
             }
         });
 
         myScroll.on("slideUp",function(){
             if(this.maxScrollY - this.y > 40){
+                upIcon.removeClass("reverse_icon");
+                //ajax请求
+                // 要 myScroll.refresh();
                 alert("slideUp");
-                upIcon.removeClass("reverse_icon")
+
             }
         });
     }

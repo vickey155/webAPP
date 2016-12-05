@@ -387,7 +387,8 @@ form .wrap-s {
     color: #6d6d72;
     text-align: left;
     font-weight: normal;
-    line-height: 0.6rem; }
+    line-height: 0.6rem;
+    margin-top: 0.2rem; }
     @media screen and (max-width: 321px) {
       .loan-index .sec p {
         font-size: 0.24rem; } }
@@ -426,13 +427,15 @@ form .wrap-s {
         float: right;
         font-weight: normal; }
     .loan-index .sec .div-wrapper .contont {
-      position: relative; }
+      position: relative;
+      padding-bottom: 0.1rem; }
       .loan-index .sec .div-wrapper .contont p {
         color: #333;
         text-align: left;
         font-weight: normal;
         line-height: 0.46rem;
-        padding: 0; }
+        padding: 0;
+        margin-top: 0.1rem; }
         @media screen and (max-width: 321px) {
           .loan-index .sec .div-wrapper .contont p {
             font-size: 0.28rem; } }
@@ -450,7 +453,7 @@ form .wrap-s {
       .loan-index .sec .div-wrapper .contont p.font-color {
         font-weight: bold;
         color: #ea8010;
-        line-height: 0.4rem; }
+        line-height: 0.36rem; }
       .loan-index .sec .div-wrapper .contont .a-arrow {
         position: absolute;
         top: 0.25rem;
@@ -1086,3 +1089,5 @@ header p {
   overflow: hidden; }
   #scrollWrap .loan-index .sec {
     padding-bottom: 0; }
+  #scrollWrap #scroller-pullUp, #scrollWrap #scroller-pullDown {
+    border: 0; }
