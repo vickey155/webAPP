@@ -18,14 +18,22 @@ block content
             input(type="text" placeholder="请输入您的手机号码")
           div.form-row
             label 所在机构名称
-            input(type="text" placeholder="请选择您的所在机构名称")
+            input(type="text" placeholder="请输入您的所在机构名称")
           div.form-row
             label 您的地址
-            input(type="text" placeholder="请输入您的地址")
+            .select-wrapper.region-select
+              select.selectS.province
+                option(value="") 浙江省
+              select.selectS.city
+                option(value="") 杭州市
+              select.selectS.area
+                option(value="") 江干区
           div.form-row
             label 您的工号牌
-            .inputFile(placeholder="上传图片")
-              input(type="file" placeholder="上传图片").opacity
+            .inputFile
+              span 上传图片
+              input(type="file" placeholder="上传图片")
+
 
       a.submit-a 提交
 

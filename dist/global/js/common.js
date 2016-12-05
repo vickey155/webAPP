@@ -7,13 +7,23 @@ $(function () {
             $(this).removeClass("full");
         }
     });
-    $("input[type=file]").on("change", function () {
-        if ($(this).val() !== '') {
-            // alert(0);
-            var fileName = $(this).val();
-            $(this).closest('.inputFile').attr('placeholder', fileName);
+    function insertTitle(path) {
+        var test1 = path.lastIndexOf("/"); //对路径进行截取
+        var test2 = path.lastIndexOf("\\"); //对路径进行截取
+        var test = Math.max(test1, test2);
+        if (test < 0) {
+            return path;
         } else {
-            $(this).closest('.inputFile').attr('placeholder', '上传图片');
+            return path.substring(test + 1);
+        }
+    }
+    $("input[type=file]").on("change", function () {
+        var inputWrapper = $(this).closest('.inputFile');
+        if ($(this).val() !== '') {
+            var fileName = insertTitle($(this).val());
+            inputWrapper.find('span').html(fileName);
+        } else {
+            inputWrapper.find('span').html('上传图片');
         }
     });
 
@@ -44,6 +54,50 @@ $(function () {
                     secHide.show();
                 }
             });
+        });
+    }
+
+    //下拉刷新
+    if ($("#scrollWrap")[0]) {
+        var myScroll,
+            downIcon = $("#down-icon"),
+            upIcon = $("#up-icon");
+        myScroll = new IScroll("#scrollWrap", { probeType: 3, mouseWheel: true });
+        myScroll.on("scroll", function () {
+            var y = this.y,
+                maxY = this.maxScrollY - y,
+                downHasClass = downIcon.hasClass("reverse_icon"),
+                upHasClass = upIcon.hasClass("reverse_icon");
+
+            if (y >= 40) {
+                !downHasClass && downIcon.addClass("reverse_icon");
+                return "";
+            } else if (y < 40 && y > 0) {
+                downHasClass && downIcon.removeClass("reverse_icon");
+                return "";
+            }
+
+            if (maxY >= 40) {
+                !upHasClass && upIcon.addClass("reverse_icon");
+                return "";
+            } else if (maxY < 40 && maxY >= 0) {
+                upHasClass && upIcon.removeClass("reverse_icon");
+                return "";
+            }
+        });
+
+        myScroll.on("slideDown", function () {
+            if (this.y > 40) {
+                alert("slideDown");
+                upIcon.removeClass("reverse_icon");
+            }
+        });
+
+        myScroll.on("slideUp", function () {
+            if (this.maxScrollY - this.y > 40) {
+                alert("slideUp");
+                upIcon.removeClass("reverse_icon");
+            }
         });
     }
 });

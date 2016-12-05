@@ -123,7 +123,7 @@ $pl:0.2rem;
   overflow: hidden;
   font-size: 0.30rem;
   border-bottom:1px solid #e8e8e8;
-  padding: 0.16rem 0.05rem;
+  padding: 0.16rem 0 0.16rem 0.05rem;
   label{
     float:left;
     color:#3d4145;
@@ -156,7 +156,6 @@ $pl:0.2rem;
     color: $defaultC;
   }
   input[type=file]{
-    font-size: 0;
     padding: 0.08rem 0;
     border: 0.01rem solid transparent;
     border-radius: 0.07rem;
@@ -172,25 +171,40 @@ $pl:0.2rem;
   .inputFile{
     display: inline-block;
     position: relative;
-  }
-  .inputFile input[type=file]{
-    position: absolute;
-    top: 0;
-    left:0;
-  }
-  .inputFile:before{
-    color:#A9A9A9;
-    content:attr(placeholder);
-  }
-  .full:before {
-    color:black;
-    content:""!important;
+    width: 3.65rem;
+    height: 0.4rem;
+    background: none;
+    padding: 0.08rem 0 0.08rem 0.1rem;
+    line-height: 0.28rem;
+    span{
+      position: absolute;
+      top: 0.2rem;
+      left:0.1rem;
+      z-index:2;
+      color: $blue;
+      font-size: 0.28rem;
+      line-height: 0.28rem;
+      vertical-align: middle;
+    }
+    .font-color{
+      color:$defaultC;
+    }
+    input[type=file]{
+      position: absolute;
+      top: 0.12rem;
+      left:0;
+      z-index: 3;
+      opacity: 0;
+    }
   }
 
   input.varityCode{
     border:1px solid #b4b4b4;
     background-color: #fff;
     width: 3.2rem;
+  }
+  .select-wrapper{
+    padding: 0.08rem 0;
   }
   select{
     padding-left: 0.1rem;
@@ -199,7 +213,7 @@ $pl:0.2rem;
     appearance: none;
     -webkit-appearance: none;
     outline: none;
-    @include fontFormat($fz:0.3rem,$fc:$defaultC,$ta:center);
+    @include fontFormat($fz:0.28rem,$fc:$defaultC,$ta:center);
     color: #999;
   }
   select.selected{
@@ -819,4 +833,23 @@ header{
       }
     }
   }
+}
+
+
+/*下拉刷新*/
+#scrollWrap{
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+   .loan-index{
+      .sec{
+        padding-bottom: 0;
+      }
+   }
+
 }

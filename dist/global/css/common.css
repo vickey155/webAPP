@@ -162,7 +162,7 @@ h1 {
   overflow: hidden;
   font-size: 0.30rem;
   border-bottom: 1px solid #e8e8e8;
-  padding: 0.16rem 0.05rem; }
+  padding: 0.16rem 0 0.16rem 0.05rem; }
   .form-row label {
     float: left;
     color: #3d4145;
@@ -191,7 +191,6 @@ h1 {
     background: none;
     color: #3d4145; }
   .form-row input[type=file] {
-    font-size: 0;
     padding: 0.08rem 0;
     border: 0.01rem solid transparent;
     border-radius: 0.07rem;
@@ -203,21 +202,35 @@ h1 {
     opacity: 0; }
   .form-row .inputFile {
     display: inline-block;
-    position: relative; }
-  .form-row .inputFile input[type=file] {
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .form-row .inputFile:before {
-    color: #A9A9A9;
-    content: attr(placeholder); }
-  .form-row .full:before {
-    color: black;
-    content: "" !important; }
+    position: relative;
+    width: 3.65rem;
+    height: 0.4rem;
+    background: none;
+    padding: 0.08rem 0 0.08rem 0.1rem;
+    line-height: 0.28rem; }
+    .form-row .inputFile span {
+      position: absolute;
+      top: 0.2rem;
+      left: 0.1rem;
+      z-index: 2;
+      color: #0894ec;
+      font-size: 0.28rem;
+      line-height: 0.28rem;
+      vertical-align: middle; }
+    .form-row .inputFile .font-color {
+      color: #3d4145; }
+    .form-row .inputFile input[type=file] {
+      position: absolute;
+      top: 0.12rem;
+      left: 0;
+      z-index: 3;
+      opacity: 0; }
   .form-row input.varityCode {
     border: 1px solid #b4b4b4;
     background-color: #fff;
     width: 3.2rem; }
+  .form-row .select-wrapper {
+    padding: 0.08rem 0; }
   .form-row select {
     padding-left: 0.1rem;
     background: none;
@@ -231,16 +244,16 @@ h1 {
     color: #999; }
     @media screen and (max-width: 321px) {
       .form-row select {
-        font-size: 0.3rem; } }
+        font-size: 0.28rem; } }
     @media screen and (min-width: 321px) and (max-width: 400px) {
       .form-row select {
-        font-size: 0.31rem; } }
+        font-size: 0.29rem; } }
     @media screen and (min-width: 400px) and (max-width: 640px) {
       .form-row select {
-        font-size: 0.32rem; } }
+        font-size: 0.3rem; } }
     @media screen and (min-width: 640px) {
       .form-row select {
-        font-size: 0.34rem; } }
+        font-size: 0.32rem; } }
   .form-row select.selected {
     color: #3d4145; }
   .form-row .selectM {
@@ -1060,3 +1073,16 @@ header p {
   .creditCard .view-process p .arrow, .creditCard .view-process p .loan-index .sec .div-wrapper .contont .a-arrow, .loan-index .sec .div-wrapper .contont .creditCard .view-process p .a-arrow, .creditCard .view-process p .personCenter .bg-white ul li a em.arrow, .personCenter .bg-white ul li a .creditCard .view-process p em.arrow {
     float: right;
     margin-top: 0.1rem; }
+
+/*下拉刷新*/
+#scrollWrap {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  overflow: hidden; }
+  #scrollWrap .loan-index .sec {
+    padding-bottom: 0; }
