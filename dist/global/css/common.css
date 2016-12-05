@@ -173,7 +173,7 @@ h1 {
     float: right;
     color: #6d6d72;
     padding: 0.08rem 0; }
-  .form-row input[type=text] {
+  .form-row input[type=text], .form-row input[type=number], .form-row input[type=date], .form-row input[type=file] {
     font-size: 0.28rem;
     padding: 0.08rem 0;
     border: 0.01rem solid transparent;
@@ -182,21 +182,10 @@ h1 {
     width: 3.5rem;
     color: #3d4145; }
   .form-row input[type=date] {
-    font-size: 0.28rem;
-    padding: 0.08rem 0;
-    border: 0.01rem solid transparent;
-    border-radius: 0.07rem;
-    padding-left: 0.1rem;
-    width: 3.5rem;
-    background: none;
+    color: #999; }
+  .form-row input[type=date].full {
     color: #3d4145; }
-  .form-row input[type=file] {
-    padding: 0.08rem 0;
-    border: 0.01rem solid transparent;
-    border-radius: 0.07rem;
-    padding-left: 0.1rem;
-    width: 3.5rem;
-    background: none;
+  .form-row input[type=date]::-webkit-outer-spin-button {
     color: #3d4145; }
   .form-row .opacity {
     opacity: 0; }
@@ -217,6 +206,8 @@ h1 {
       font-size: 0.28rem;
       line-height: 0.28rem;
       vertical-align: middle; }
+    .form-row .inputFile span.error-input {
+      color: red; }
     .form-row .inputFile .font-color {
       color: #3d4145; }
     .form-row .inputFile input[type=file] {
@@ -233,8 +224,10 @@ h1 {
     padding: 0.08rem 0; }
   .form-row select {
     padding-left: 0.1rem;
+    margin-top: 0.08rem;
     background: none;
-    border: 1px solid transparent;
+    border: 0.01rem solid transparent;
+    border-radius: 0.07rem;
     appearance: none;
     -webkit-appearance: none;
     outline: none;
@@ -262,6 +255,10 @@ h1 {
     display: inline-block; }
     .form-row .select-wrapper .selectS {
       width: 1.1rem; }
+  .form-row input[type=text].error-input, .form-row input[type=number].error-input, .form-row input[type=date].error-input, .form-row input[type=file].error-input {
+    border-color: red; }
+  .form-row .error-input {
+    border-color: red; }
 
 .form-row:last-child {
   border-bottom: 0; }
@@ -329,7 +326,8 @@ form .bg-white {
       color: #999;
       line-height: 0.8rem; }
   form .bg-white .codeBtn {
-    margin-left: 0.25rem; }
+    margin-left: 0.25rem;
+    padding: 0.09rem 0.1rem; }
   form .bg-white .btn-a {
     padding-top: 0.1rem; }
     form .bg-white .btn-a a {

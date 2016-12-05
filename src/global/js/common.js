@@ -95,7 +95,6 @@ $(function () {
         myScroll.on("slideDown",function(){
             if(this.y > 40){
                 upIcon.removeClass("reverse_icon");
-
                 alert("slideDown");
             }
         });
@@ -111,7 +110,80 @@ $(function () {
         });
     }
 
+   if($("form")[0]){
+       var checkForm = function () {
+           var inputTxt = $("form input:not(:hidden)");
+           var inputFile = $("form input[type=file]");
+           var inputDate = $("form input[type=date]");
+           var selectObj = $("form select:not(:hidden)");
+           inputTxt.each(function(){
+               var sel = $(this);
+               var selVal = $.trim(sel.val());
+               if(selVal == ''){
+                   sel.addClass("error-input");
+               }
+               else{
+                   sel.removeClass("error-input");
+               }
+           });
+           inputTxt.on("focus",function(){
+               $(this).removeClass("error-input");
+           });
 
+           inputFile.each(function(){
+               var sel = $(this);
+               var selVal = $.trim(sel.val());
+               var fontColor = sel.closest(".inputFile").find('span');
+               if(selVal == ''){
+                   fontColor.addClass("error-input");
+               }
+               else{
+                   fontColor.removeClass("error-input");
+               }
+           });
+           inputFile.on("change",function(){
+               var sel = $(this);
+               var selVal = $.trim(sel.val());
+               var fontColor = sel.closest(".inputFile").find('span');
+               if(selVal == ''){
+                   fontColor.addClass("error-input");
+               }
+               else{
+                   fontColor.removeClass("error-input");
+               }
+           });
+           selectObj.each(function(){
+               var sel = $(this);
+               var selVal = $.trim(sel.val());
+               if(selVal == ''){
+                   sel.addClass("error-input");
+               }
+               else{
+                   sel.removeClass("error-input");
+               }
+           });
+           selectObj.on("change",function(){
+               $(this).removeClass("error-input");
+           });
+           if($(".error-input").length>0){
+               return false
+           }
+           else{
+               return true;
+           }
+       }
+
+
+       $("a.submit-a").on("click",function () {
+           console.log(checkForm());
+           if(checkForm()){
+               //alert(0);
+           }
+           else{
+              // alert('fail');
+           }
+       });
+   }
 
 
 

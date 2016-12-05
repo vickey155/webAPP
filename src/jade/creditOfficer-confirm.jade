@@ -8,31 +8,34 @@ block content
   section
     .sec
       p 请完善以下信息，以便我们认证您的信贷员身份
-      form.valid-form
+      form.valid-form(autocomplete="on")
         div.bg-white
           div.form-row
             label 姓名
-            input(type="text" placeholder="请输入您的姓名")
+            input(type="text" placeholder="请输入您的姓名" name="name")
           div.form-row
             label 您的手机
-            input(type="text" placeholder="请输入您的手机号码")
+            input(type="number" placeholder="请输入您的手机号码" name="telephone")
           div.form-row
             label 所在机构名称
-            input(type="text" placeholder="请输入您的所在机构名称")
+            input(type="text" placeholder="请输入您的所在机构名称" name="workName")
           div.form-row
             label 您的地址
             .select-wrapper.region-select
-              select.selectS.province
-                option(value="") 浙江省
-              select.selectS.city
-                option(value="") 杭州市
-              select.selectS.area
-                option(value="") 江干区
+              select.selectS.province(name="province")
+                option(value="") 省
+                option(value="0") 浙江省
+              select.selectS.city(name="city")
+                option(value="") 市
+                option(value="0") 杭州市
+              select.selectS.area(name="area")
+                option(value="") 区
+                option(value="0") 江干区
           div.form-row
             label 您的工号牌
             .inputFile
               span 上传图片
-              input(type="file" placeholder="上传图片")
+              input(type="file" placeholder="上传图片")(name="fileName")
 
 
       a.submit-a 提交

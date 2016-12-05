@@ -7,7 +7,7 @@ block content
   section.loan-applay-second
       .sec
         p.page-state 请完善以下信息，以便我们为您制定专属贷款方案
-        form.valid-form
+        form.valid-form(autocomplete="on")
           .wrapper
             div.bg-white
               div.form-row
@@ -15,7 +15,7 @@ block content
                 input(type="text" placeholder="请输入您的姓名" value="ling")
               div.form-row
                 label 您的手机
-                input(type="text" placeholder="请输入您的手机号码" value="15236897856")
+                input(type="number" placeholder="请输入您的手机号码" value="15236897856")
               div.form-row
                 label 您的地址
                 .select-wrapper.region-select
@@ -65,7 +65,7 @@ block content
               .sec-hide
                 div.form-row
                   label 房产估值
-                  input(type="text" placeholder="请填写房产购买价格(万元)")
+                  input(type="number" placeholder="请填写房产购买价格(万元)")
                 div.form-row
                   label 房贷情况
                   select.selectM
@@ -94,7 +94,7 @@ block content
               .sec-hide
                 div.form-row
                   label 购买价格
-                  input(type="text" placeholder="请填写车辆购买价格(万元)")
+                  input(type="number" placeholder="请填写车辆购买价格(万元)")
                 div.form-row
                   label 投保公司
                   select.selectM
@@ -120,7 +120,7 @@ block content
               .sec-hide
                 div.form-row
                   label 信用卡额度
-                  input(type="text" placeholder="请您填写信用卡最高额度(元)")
+                  input(type="number" placeholder="请您填写信用卡最高额度(元)")
                 div.form-row
                   label 所属银行
                   select.selectM
@@ -159,7 +159,7 @@ block content
                     option(value="4") 其他保险公司
                 div.form-row
                   label 保险生效日期
-                  input(type="date" placeholder="请选择日期")
+                  input(type="date")
                 div.form-row
                   label 缴费方式
                   select.selectM

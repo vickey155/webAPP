@@ -37,12 +37,13 @@ input:-webkit-autofill {
   background-image: none;
 }
 
-input[type="date"]:before{
+input[type=date]:before{
   color:#A9A9A9;
   content:attr(placeholder);
 }
-input[type="date"].full:before {
-  color:black;
+
+input[type=date].full:before {
+  color:#3d4145;
   content:""!important;
 }
 

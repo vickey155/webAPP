@@ -136,7 +136,8 @@ $pl:0.2rem;
     color: #6d6d72;
     padding: 0.08rem 0;
   }
-  input[type=text]{
+
+  input[type=text], input[type=number], input[type=date], input[type=file]{
     font-size: 0.28rem;
     padding: 0.08rem 0;
     border: 0.01rem solid transparent;
@@ -146,24 +147,13 @@ $pl:0.2rem;
     color: $defaultC;
   }
   input[type=date]{
-    font-size: 0.28rem;
-    padding: 0.08rem 0;
-    border: 0.01rem solid transparent;
-    border-radius: 0.07rem;
-    padding-left: 0.1rem;
-    width: 3.5rem;
-    background: none;
-    color: $defaultC;
+    color: #999;
   }
-  input[type=file]{
-    padding: 0.08rem 0;
-    border: 0.01rem solid transparent;
-    border-radius: 0.07rem;
-    padding-left: 0.1rem;
-    width: 3.5rem;
-    background: none;
+  input[type=date].full{
+    color:#3d4145;
+  }
+  input[type=date]::-webkit-outer-spin-button{
     color: $defaultC;
-
   }
   .opacity{
     opacity: 0;
@@ -185,6 +175,9 @@ $pl:0.2rem;
       font-size: 0.28rem;
       line-height: 0.28rem;
       vertical-align: middle;
+    }
+    span.error-input{
+      color: red;
     }
     .font-color{
       color:$defaultC;
@@ -208,8 +201,10 @@ $pl:0.2rem;
   }
   select{
     padding-left: 0.1rem;
+    margin-top: 0.08rem;
     background:none;
-    border: 1px solid transparent;
+    border: 0.01rem solid transparent;
+    border-radius: 0.07rem;
     appearance: none;
     -webkit-appearance: none;
     outline: none;
@@ -228,6 +223,14 @@ $pl:0.2rem;
        width:1.1rem;
      }
   }
+
+  input[type=text].error-input, input[type=number].error-input,input[type=date].error-input,input[type=file].error-input{
+    border-color:red;
+  }
+  .error-input{
+    border-color:red;
+  }
+
 }
 .form-row:last-child{border-bottom: 0;}
 .btn-radius{
@@ -272,6 +275,7 @@ form{
     .codeBtn{
       @extend .a-btn-blue;
       margin-left: 0.25rem;
+      padding:0.09rem 0.1rem;
     }
     .btn-a{
       padding-top: 0.1rem;
