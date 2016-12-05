@@ -144,7 +144,9 @@ $pl:0.2rem;
     border-radius: 0.07rem;
     padding-left: 0.1rem;
     width: 3.5rem;
+    height: 0.56rem;
     color: $defaultC;
+    overflow: hidden;
   }
   input[type=date]{
     color: #999;
@@ -201,7 +203,8 @@ $pl:0.2rem;
   }
   select{
     padding-left: 0.1rem;
-    margin-top: 0.08rem;
+    margin-top: 0.04rem;
+    height: 0.56rem;
     background:none;
     border: 0.01rem solid transparent;
     border-radius: 0.07rem;

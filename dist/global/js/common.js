@@ -40,19 +40,23 @@ $(function () {
     $(".region-select").regionSelect();
     //申请页有无隐藏
     if ($(".loan-applay-second")[0]) {
+        var isShowContent = function (self) {
+            var selectedOpt = self.find("option:selected");
+            var selectedVal = $.trim(selectedOpt.val());
+            var isHide = selectedOpt.data("hide");
+            console.log(typeof isHide);
+            var secHide = self.closest('.bg-white').find(".sec-hide");
+            if (isHide == true || selectedVal === '') {
+                secHide.hide();
+            } else {
+                secHide.show();
+            }
+        };
         $(".filter-select").each(function () {
             var self = $(this);
+            isShowContent(self);
             self.on('change', function () {
-                var selectedOpt = self.find("option:selected");
-                var selectedVal = $.trim(selectedOpt.val());
-                var isHide = selectedOpt.data("hide");
-                console.log(typeof isHide);
-                var secHide = self.closest('.bg-white').find(".sec-hide");
-                if (isHide == true || selectedVal === '') {
-                    secHide.hide();
-                } else {
-                    secHide.show();
-                }
+                isShowContent(self);
             });
         });
     }
