@@ -34,8 +34,7 @@ h1 {
   min-height: 100%; }
   .vipsection .banner {
     width: 100%;
-    height: 2.05rem;
-    background: #39F url("/global/images/LOOGO.png") no-repeat 50% 50%; }
+    height: 2.8rem; }
   .vipsection .sec {
     padding: 0.4rem 0.2rem; }
     .vipsection .sec .wrapper {
@@ -108,9 +107,7 @@ h1 {
         border-radius: 0.1rem;
         color: #fff;
         text-align: center;
-        font-weight: normal;
-        height: 0.5rem;
-        line-height: 0.5rem; }
+        font-weight: normal; }
         @media screen and (max-width: 321px) {
           .vipsection .sec .btn a {
             font-size: 0.26rem; } }
@@ -129,35 +126,7 @@ h1 {
         background-color: #F90; }
 
 /*表单格式*/
-.sec {
-  padding-bottom: 0.8rem; }
-  .sec p {
-    color: #6d6d72;
-    text-align: left;
-    font-weight: normal;
-    line-height: 0.6rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding-left: 0.2rem;
-    margin-top: 0.3rem; }
-    @media screen and (max-width: 321px) {
-      .sec p {
-        font-size: 0.24rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .sec p {
-        font-size: 0.25rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .sec p {
-        font-size: 0.26rem; } }
-    @media screen and (min-width: 640px) {
-      .sec p {
-        font-size: 0.28rem; } }
-
 /* form */
-.bg-white {
-  background-color: #fff;
-  padding: 0 0.2rem; }
-
 .form-row {
   overflow: hidden;
   font-size: 0.30rem;
@@ -189,8 +158,6 @@ h1 {
     color: #3d4145; }
   .form-row input[type=date]::-webkit-outer-spin-button {
     color: #3d4145; }
-  .form-row .opacity {
-    opacity: 0; }
   .form-row .inputFile {
     display: inline-block;
     position: relative;
@@ -216,7 +183,10 @@ h1 {
       position: absolute;
       top: 0.12rem;
       left: 0;
-      z-index: 3;
+      z-index: 3; }
+    .form-row .inputFile img {
+      max-width: 0.8rem; }
+    .form-row .inputFile .opacity {
       opacity: 0; }
   .form-row input.varityCode {
     border: 1px solid #b4b4b4;
@@ -266,54 +236,6 @@ h1 {
 .form-row:last-child {
   border-bottom: 0; }
 
-.btn-radius, .recharge-btn a, .recharge a {
-  border-radius: 0.08rem; }
-
-.btn-a a {
-  padding: 0 0.6rem;
-  border-radius: 0.1rem;
-  border: 1px solid #6e727b;
-  color: #5f646e;
-  text-align: center;
-  font-weight: normal;
-  padding: 0.16rem 0;
-  margin-right: 0.3rem; }
-  @media screen and (max-width: 321px) {
-    .btn-a a {
-      font-size: 0.24rem; } }
-  @media screen and (min-width: 321px) and (max-width: 400px) {
-    .btn-a a {
-      font-size: 0.25rem; } }
-  @media screen and (min-width: 400px) and (max-width: 640px) {
-    .btn-a a {
-      font-size: 0.26rem; } }
-  @media screen and (min-width: 640px) {
-    .btn-a a {
-      font-size: 0.28rem; } }
-
-/*蓝色按钮*/
-.a-btn-blue, form .bg-white .codeBtn, .submit-a {
-  padding: 0 0.2rem;
-  border-radius: 0.08rem;
-  border: 1px solid #0894ec;
-  background-color: #0894ec;
-  color: #fff;
-  text-align: center;
-  font-weight: normal;
-  padding: 0.12rem 0; }
-  @media screen and (max-width: 321px) {
-    .a-btn-blue, form .bg-white .codeBtn, .submit-a {
-      font-size: 0.24rem; } }
-  @media screen and (min-width: 321px) and (max-width: 400px) {
-    .a-btn-blue, form .bg-white .codeBtn, .submit-a {
-      font-size: 0.25rem; } }
-  @media screen and (min-width: 400px) and (max-width: 640px) {
-    .a-btn-blue, form .bg-white .codeBtn, .submit-a {
-      font-size: 0.26rem; } }
-  @media screen and (min-width: 640px) {
-    .a-btn-blue, form .bg-white .codeBtn, .submit-a {
-      font-size: 0.28rem; } }
-
 form .bg-white {
   margin-bottom: 0.2rem;
   padding: 0 0.25rem; }
@@ -328,9 +250,6 @@ form .bg-white {
       font-weight: normal;
       color: #999;
       line-height: 0.8rem; }
-  form .bg-white .codeBtn {
-    margin-left: 0.25rem;
-    padding: 0.09rem 0.1rem; }
   form .bg-white .btn-a {
     padding-top: 0.1rem; }
     form .bg-white .btn-a a {
@@ -350,23 +269,72 @@ form .wrap-s {
   padding: 0 0.25rem 0.3rem; }
 
 /*提交按钮*/
-.submit-a {
-  width: 94%;
-  margin-left: 3%;
-  margin-top: 0.2rem;
-  padding: 0.04rem 0; }
+.btn-radius {
+  border-radius: 0.08rem; }
+
+.btn-a a {
+  padding: 0 0.6rem;
+  border-radius: 0.1rem;
+  border: 1px solid #6e727b;
+  color: #5f646e;
+  text-align: center;
+  font-weight: normal;
+  padding: 0.16rem 0;
+  margin-right: 0.3rem; }
   @media screen and (max-width: 321px) {
-    .submit-a {
-      font-size: 0.24rem; } }
-  @media screen and (min-width: 321px) and (max-width: 400px) {
-    .submit-a {
-      font-size: 0.26rem; } }
-  @media screen and (min-width: 400px) and (max-width: 640px) {
-    .submit-a {
+    .btn-a a {
       font-size: 0.28rem; } }
-  @media screen and (min-width: 640px) {
-    .submit-a {
+  @media screen and (min-width: 321px) and (max-width: 400px) {
+    .btn-a a {
+      font-size: 0.29rem; } }
+  @media screen and (min-width: 400px) and (max-width: 640px) {
+    .btn-a a {
       font-size: 0.3rem; } }
+  @media screen and (min-width: 640px) {
+    .btn-a a {
+      font-size: 0.32rem; } }
+
+.a-btn, .submit-a, .recharge-btn a, .recharge .recharge-btn a, .codeBtn {
+  padding: 0.08rem 0.06rem;
+  border-radius: 0.1rem;
+  color: #fff;
+  text-align: center;
+  font-weight: normal; }
+  @media screen and (max-width: 321px) {
+    .a-btn, .submit-a, .recharge-btn a, .recharge .recharge-btn a, .codeBtn {
+      font-size: 0.28rem; } }
+  @media screen and (min-width: 321px) and (max-width: 400px) {
+    .a-btn, .submit-a, .recharge-btn a, .recharge .recharge-btn a, .codeBtn {
+      font-size: 0.29rem; } }
+  @media screen and (min-width: 400px) and (max-width: 640px) {
+    .a-btn, .submit-a, .recharge-btn a, .recharge .recharge-btn a, .codeBtn {
+      font-size: 0.3rem; } }
+  @media screen and (min-width: 640px) {
+    .a-btn, .submit-a, .recharge-btn a, .recharge .recharge-btn a, .codeBtn {
+      font-size: 0.32rem; } }
+
+.submit-a, .recharge-btn a, .recharge .recharge-btn a {
+  width: 92%;
+  margin-left: 4%;
+  margin-top: 0.7rem; }
+
+.codeBtn {
+  background-color: #0894ec;
+  margin-left: 0.25rem;
+  padding: 0.06rem 0.1rem; }
+
+/*蓝色按钮*/
+.a-btn-blue {
+  background-color: #0894ec; }
+
+.a-btn-red {
+  background-color: #F00; }
+
+.a-btn-green {
+  background-color: #0C0; }
+
+.a-btn-orange {
+  background-color: #F60; }
 
 /*右侧箭头*/
 .arrow, .loan-index .sec .div-wrapper .contont .a-arrow, .personCenter .bg-white ul li a em.arrow {
@@ -374,14 +342,45 @@ form .wrap-s {
   height: 0.28rem;
   background: url("/global/images/sel.png") no-repeat 0 0/cover; }
 
+.sec {
+  padding-bottom: 0.8rem; }
+  .sec p {
+    color: #6d6d72;
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1rem 0 0.1rem 0.2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 0.3rem; }
+    @media screen and (max-width: 321px) {
+      .sec p {
+        font-size: 0.26rem; } }
+    @media screen and (min-width: 321px) and (max-width: 400px) {
+      .sec p {
+        font-size: 0.27rem; } }
+    @media screen and (min-width: 400px) and (max-width: 640px) {
+      .sec p {
+        font-size: 0.28rem; } }
+    @media screen and (min-width: 640px) {
+      .sec p {
+        font-size: 0.3rem; } }
+
+.bg-white {
+  background-color: #fff;
+  padding: 0 0.2rem; }
+
 /*客户详情*/
 /*抵押贷款*/
-/*贷款申请首页*/
-.loan-index .banner {
+/*banner*/
+.banner {
   width: 100%;
-  height: 2.8rem;
-  background: url("/global/images/APPbanner.jpg") no-repeat 0 0/cover; }
+  height: 2.8rem; }
+  .banner img {
+    width: 100%;
+    height: 100%;
+    border: 0; }
 
+/*贷款申请首页*/
 .loan-index .sec {
   padding-bottom: 1.2rem; }
   .loan-index .sec p {
@@ -468,7 +467,7 @@ form .wrap-s {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 0.9rem;
+  height: 1rem;
   z-index: 99;
   background: #f7f7f8; }
   .fixed-footer ul {
@@ -476,7 +475,7 @@ form .wrap-s {
     .fixed-footer ul li {
       float: left;
       width: 33%;
-      padding-top: 0.16rem; }
+      padding: 0.15rem 0; }
       .fixed-footer ul li a {
         width: 100%;
         text-align: center; }
@@ -487,7 +486,8 @@ form .wrap-s {
         text-align: center;
         width: 0.24rem;
         height: 0.3rem;
-        position: relative; }
+        position: relative;
+        top: 0.08rem; }
         .fixed-footer ul li .trangle em {
           display: inline-block;
           width: 0.26rem;
@@ -499,7 +499,7 @@ form .wrap-s {
           line-height: 0.27rem;
           font-style: normal;
           position: absolute;
-          top: -0.16rem;
+          top: -0.15rem;
           right: -0.16rem;
           z-index: 2; }
           @media screen and (max-width: 321px) {
@@ -764,37 +764,24 @@ header p {
     padding-left: 0.3rem; }
 
 /*充值按钮*/
-.recharge-btn, .recharge {
+.recharge-btn, .recharge .recharge-btn {
   padding: 0 0.25rem; }
-  .recharge-btn a, .recharge a {
+  .recharge-btn a, .recharge .recharge-btn a {
     width: 100%;
-    color: #fff;
-    text-align: center;
-    font-weight: normal;
-    line-height: 0.48rem;
-    margin-top: 0.65rem; }
-    @media screen and (max-width: 321px) {
-      .recharge-btn a, .recharge a {
-        font-size: 0.25rem; } }
-    @media screen and (min-width: 321px) and (max-width: 400px) {
-      .recharge-btn a, .recharge a {
-        font-size: 0.26rem; } }
-    @media screen and (min-width: 400px) and (max-width: 640px) {
-      .recharge-btn a, .recharge a {
-        font-size: 0.27rem; } }
-    @media screen and (min-width: 640px) {
-      .recharge-btn a, .recharge a {
-        font-size: 0.29rem; } }
-  .recharge-btn a.a-btn-blue, .recharge a.a-btn-blue, .recharge-btn form .bg-white a.codeBtn, form .bg-white .recharge-btn a.codeBtn, .recharge form .bg-white a.codeBtn, form .bg-white .recharge a.codeBtn, .recharge-btn a.submit-a, .recharge a.submit-a {
+    margin: 0.75rem 0 0; }
+  .recharge-btn a.a-btn-blue {
     background-color: #09F; }
-  .recharge-btn a.a-btn-red, .recharge a.a-btn-red {
+  .recharge-btn a.a-btn-red {
     background-color: #F00; }
-  .recharge-btn a.a-btn-green, .recharge a.a-btn-green {
+  .recharge-btn a.a-btn-green {
     background-color: #0C0; }
-  .recharge-btn a.a-btn-orange, .recharge a.a-btn-orange {
+  .recharge-btn a.a-btn-orange {
     background-color: #F60; }
 
 /*充值页面*/
+.recharge {
+  padding-top: 0.4rem; }
+
 /*.VIPapply*/
 .VIPapply div {
   width: 100%;
@@ -809,16 +796,22 @@ header p {
 .VIPapply .sec02 {
   background: url("/global/images/js.jpg") no-repeat 0 0/cover; }
 
-.VIPapply .submit-a {
-  margin-top: 0.7rem;
-  line-height: 0.46rem; }
+.VIPapply .submit-a, .VIPapply .recharge-btn a, .recharge-btn .VIPapply a {
+  margin-top: 0.7rem; }
 
 /*提交成功*/
 .submitSuccess .banner {
   width: 100%;
-  height: 5.12rem;
-  background: url("/global/images/user-money-bg.jpg") no-repeat 0 0;
-  text-align: center; }
+  height: 2.8rem;
+  text-align: center;
+  position: relative; }
+  .submitSuccess .banner .txt-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    height: 100%;
+    width: 100%; }
   .submitSuccess .banner h1 {
     color: #3d4145;
     text-align: center;
@@ -878,15 +871,35 @@ header p {
           font-size: 0.28rem; } }
 
 .submitSuccess .wrapper {
-  padding-top: 0.1rem; }
-  .submitSuccess .wrapper .submit-a {
-    margin-top: 0.1rem; }
+  padding-top: 0.25rem; }
+  .submitSuccess .wrapper p {
+    color: #6d6d72;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 0.28rem; }
+    @media screen and (max-width: 321px) {
+      .submitSuccess .wrapper p {
+        font-size: 0.28rem; } }
+    @media screen and (min-width: 321px) and (max-width: 400px) {
+      .submitSuccess .wrapper p {
+        font-size: 0.29rem; } }
+    @media screen and (min-width: 400px) and (max-width: 640px) {
+      .submitSuccess .wrapper p {
+        font-size: 0.3rem; } }
+    @media screen and (min-width: 640px) {
+      .submitSuccess .wrapper p {
+        font-size: 0.32rem; } }
+  .submitSuccess .wrapper .submit-a, .submitSuccess .wrapper .recharge-btn a, .recharge-btn .submitSuccess .wrapper a {
+    margin-top: 0.16rem;
+    background: #F00;
+    border: 0;
+    padding: 0.06rem 0; }
 
 /*信贷员中心*/
 .creditOfficer .banner {
   background-image: url("/global/images/user-money-bg1.jpg"); }
 
-.creditOfficer .recharge-btn a.a-btn-orange, .creditOfficer .recharge a.a-btn-orange {
+.creditOfficer .recharge-btn a.a-btn-orange {
   background-color: #F60;
   margin-top: 0.3rem; }
 

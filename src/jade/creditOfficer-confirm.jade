@@ -35,10 +35,16 @@ block content
             label 您的工号牌
             .inputFile
               span 上传图片
-              input(type="file" placeholder="上传图片")(name="fileName")
+              input.opacity(type="file" placeholder="上传图片")(name="fileName")
+              img.opacity(src="")
 
 
-      a.submit-a 提交
+
+        div.bg-white
+          div.form-row
+            input(type="text" class="varityCode" placeholder="请输入验证码")
+            a.codeBtn 获取短信验证码
+      a.submit-a.a-btn-blue 提交
 
 
 

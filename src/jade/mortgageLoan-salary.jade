@@ -6,6 +6,8 @@ block append headTitle
 
 block content
   section
+    .banner
+      img(src="../global/images/APPbanner.jpg")
     .sec
       p 请完善以下信息，以便我们为您制定专属贷款方案
       form.valid-form(autocomplete="on")
@@ -85,7 +87,7 @@ block content
           div.form-row
             input(type="text" class="varityCode" placeholder="请输入验证码")
             a.codeBtn 获取短信验证码
-      a.submit-a 提交
+      a.submit-a.a-btn-blue 提交
 
 
 

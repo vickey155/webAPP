@@ -17,13 +17,16 @@ $(function () {
             return path.substring(test + 1);
         }
     }
+    //上传图片
     $("input[type=file]").on("change", function () {
         var inputWrapper = $(this).closest('.inputFile');
         if ($(this).val() !== '') {
             var fileName = insertTitle($(this).val());
-            inputWrapper.find('span').html(fileName);
+            inputWrapper.find('img').removeClass('opacity').attr('src', "/global/images/banner.jpg");
+            inputWrapper.find('span').html("");
         } else {
             inputWrapper.find('span').html('上传图片');
+            inputWrapper.find('img').addClass('opacity');
         }
     });
 
