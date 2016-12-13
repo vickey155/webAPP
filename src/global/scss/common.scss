@@ -347,6 +347,13 @@ $pl:0.2rem;
     width: 100%;
     height: 100%;
     border:0;
+    overflow: hidden;
+    outline: none;
+  }
+  .avater{
+    img{
+      border-radius: 50%;
+    }
   }
 }
 
@@ -419,7 +426,7 @@ $pl:0.2rem;
       float: left;
       width: 33%;
       padding: 0.15rem 0;
-      a{width: 100%; text-align: center}
+      a{width: 100%; text-align: center;}
       .trangle{
         border:1px solid #929292;
         font-size: 0.20rem;
@@ -446,9 +453,10 @@ $pl:0.2rem;
       }
       p{
         color: #929292;
-        padding:0;
+        padding:0.02rem 0;
         text-align: center;
-        font-size: 0.2rem;
+        font-size: 0.28rem;
+
       }
       a.active{
         .trangle{
@@ -505,7 +513,7 @@ $pl:0.2rem;
 }
 .myCustomer{
   .tab-content{
-    padding:0.6rem 0.4rem;
+    padding:0.6rem 0.4rem 0;
   }
   .per-page{
     background-color: #fff;
@@ -665,13 +673,18 @@ header{
     height:2.8rem;
   }
   .banner{
-    background:url('/global/images/banner.jpg') no-repeat 0 0 /cover;
   }
   .sec01{
-    background:url('/global/images/jiage.jpg') no-repeat 0 0 /cover;
+     img{
+       width: 100%;
+       height:100%;
+     }
   }
   .sec02{
-    background:url('/global/images/js.jpg') no-repeat 0 0 /cover;
+    img{
+      width: 100%;
+      height:100%;
+    }
   }
   .submit-a{
     margin-top: 0.7rem;
@@ -771,12 +784,12 @@ header{
      }
   }
   .sec-content{
-    padding: 0.6rem 0.15rem;
+    padding: 0.6rem 0.2rem 0;
   }
   .per-page{
     background-color: #fff;
     border-radius:0.05rem;
-    box-shadow: 0 0.02rem 0.02rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.01rem 0.01rem rgba(0, 0, 0, 0.5);
     margin-bottom: 0.2rem;
     padding:0.2rem 0;
     p{
@@ -901,8 +914,11 @@ header{
   bottom: 0px;
   left: 0;
   width: 100%;
-  background: #fff;
   overflow: hidden;
+
+  #scroller{
+    padding-bottom: 0.8rem;
+  }
    .loan-index{
       .sec{
         padding-bottom: 0;
@@ -910,5 +926,9 @@ header{
    }
   #scroller-pullUp,#scroller-pullDown{
     border: 0;
+  }
+  #scroller-pullUp{
+    bottom:0.8rem;
+    background-color: transparent;
   }
 }

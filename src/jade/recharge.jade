@@ -12,22 +12,12 @@ block content
       a.a-btn-green  立即充值1000元体验
       a.a-btn-orange  立即充值2000元体验
 
-    .fixed-footer
-      ul
-        li
-          a(href="/template/recharge.html").active
-            span.trangle
-            p 立即充值
-        li
-          a(href="/template/creditOfficer-mycustomer.html")
-            span.trangle
-              em 2
-            p 我的客户
-        li
-          a(href="/template/creditOfficer-person.html")
-            span.trangle
-              em 9
-            p 贷款中心
+    include temp/fixedFooter
+
+    script.
+      $(function () {
+        $(".fixed-footer a").eq(0).addClass('active');
+      });
 
 
 

@@ -8,7 +8,7 @@ block content
     .banner
       .row-t
         span.avater
-          img(src="")
+          img(src="../global/images/banner.jpg")
         p.name T-mac
         p.inviteCode  我的邀请码：
           span.code 1867895241
@@ -38,22 +38,12 @@ block content
 
 
 
-    .fixed-footer
-      ul
-        li
-          a(href="/template/recharge.html")
-            span.trangle
-            p 立即充值
-        li
-          a(href="/template/creditOfficer-mycustomer.html")
-            span.trangle
-              em 2
-            p 我的客户
-        li
-          a.active(href="/")
-            span.trangle
-              em 9
-            p 贷款中心
+    include temp/fixedFooter
+
+    script.
+      $(function () {
+        $(".fixed-footer a").eq(2).addClass('active');
+      });
 
 
 

@@ -70,52 +70,6 @@ $(function () {
 
    }
 
-   //下拉刷新
-    if($("#scrollWrap")[0]){
-        var myScroll,
-            downIcon = $("#down-icon"),
-            upIcon = $("#up-icon");
-        myScroll = new IScroll("#scrollWrap",{probeType: 3, mouseWheel: true});
-        myScroll.on("scroll",function(){
-            var y = this.y,
-                maxY = this.maxScrollY - y,
-                downHasClass = downIcon.hasClass("reverse_icon"),
-                upHasClass = upIcon.hasClass("reverse_icon");
-
-            if(y >= 40){
-                !downHasClass && downIcon.addClass("reverse_icon");
-                return "";
-            }else if(y < 40 && y > 0){
-                downHasClass && downIcon.removeClass("reverse_icon");
-                return "";
-            }
-
-            if(maxY >= 40){
-                !upHasClass && upIcon.addClass("reverse_icon");
-                return "";
-            }else if(maxY < 40 && maxY >=0){
-                upHasClass && upIcon.removeClass("reverse_icon");
-                return "";
-            }
-        });
-
-        myScroll.on("slideDown",function(){
-            if(this.y > 40){
-                upIcon.removeClass("reverse_icon");
-                alert("slideDown");
-            }
-        });
-
-        myScroll.on("slideUp",function(){
-            if(this.maxScrollY - this.y > 40){
-                upIcon.removeClass("reverse_icon");
-                //ajax请求
-                // 要 myScroll.refresh();
-                alert("slideUp");
-
-            }
-        });
-    }
 
    if($("form")[0]){
        var checkForm = function () {
@@ -191,14 +145,6 @@ $(function () {
            }
        });
    }
-
-
-
-
-
-
-
-
 
 })
     

@@ -378,7 +378,11 @@ form .wrap-s {
   .banner img {
     width: 100%;
     height: 100%;
-    border: 0; }
+    border: 0;
+    overflow: hidden;
+    outline: none; }
+  .banner .avater img {
+    border-radius: 50%; }
 
 /*贷款申请首页*/
 .loan-index .sec {
@@ -516,9 +520,9 @@ form .wrap-s {
               font-size: 0.22rem; } }
       .fixed-footer ul li p {
         color: #929292;
-        padding: 0;
+        padding: 0.02rem 0;
         text-align: center;
-        font-size: 0.2rem; }
+        font-size: 0.28rem; }
       .fixed-footer ul li a.active .trangle {
         border-color: #0894ec; }
       .fixed-footer ul li a.active p {
@@ -569,7 +573,7 @@ form .wrap-s {
   color: #0894ec; }
 
 .myCustomer .tab-content {
-  padding: 0.6rem 0.4rem; }
+  padding: 0.6rem 0.4rem 0; }
 
 .myCustomer .per-page {
   background-color: #fff;
@@ -787,14 +791,13 @@ header p {
   width: 100%;
   height: 2.8rem; }
 
-.VIPapply .banner {
-  background: url("/global/images/banner.jpg") no-repeat 0 0/cover; }
+.VIPapply .sec01 img {
+  width: 100%;
+  height: 100%; }
 
-.VIPapply .sec01 {
-  background: url("/global/images/jiage.jpg") no-repeat 0 0/cover; }
-
-.VIPapply .sec02 {
-  background: url("/global/images/js.jpg") no-repeat 0 0/cover; }
+.VIPapply .sec02 img {
+  width: 100%;
+  height: 100%; }
 
 .VIPapply .submit-a, .VIPapply .recharge-btn a, .recharge-btn .VIPapply a {
   margin-top: 0.7rem; }
@@ -938,12 +941,12 @@ header p {
         font-size: 0.34rem; } }
 
 .credit-myCustomer .sec-content {
-  padding: 0.6rem 0.15rem; }
+  padding: 0.6rem 0.2rem 0; }
 
 .credit-myCustomer .per-page {
   background-color: #fff;
   border-radius: 0.05rem;
-  box-shadow: 0 0.02rem 0.02rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.01rem 0.01rem rgba(0, 0, 0, 0.5);
   margin-bottom: 0.2rem;
   padding: 0.2rem 0; }
   .credit-myCustomer .per-page p {
@@ -1099,9 +1102,13 @@ header p {
   bottom: 0px;
   left: 0;
   width: 100%;
-  background: #fff;
   overflow: hidden; }
+  #scrollWrap #scroller {
+    padding-bottom: 0.8rem; }
   #scrollWrap .loan-index .sec {
     padding-bottom: 0; }
   #scrollWrap #scroller-pullUp, #scrollWrap #scroller-pullDown {
     border: 0; }
+  #scrollWrap #scroller-pullUp {
+    bottom: 0.8rem;
+    background-color: transparent; }

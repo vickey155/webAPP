@@ -15,14 +15,13 @@
     <link rel="stylesheet" href="../global/css/iscroll.css">
     <script type="text/javascript" src="../global/js/jquery.min.js"></script>
     <script type="text/javascript" src="../global/js/jquery.regionSelect.js"></script>
-    <script type="text/javascript" src="../global/js/iscroll.js"></script>
     <script type="text/javascript" src="../global/js/common.js"></script>
     <script>document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';</script>
   </head>
   <body>
     <section class="personCenter creditOfficer">
       <div class="banner">
-        <div class="row-t"><span class="avater"><img src=""></span>
+        <div class="row-t"><span class="avater"><img src="../global/images/banner.jpg"></span>
           <p class="name">T-mac</p>
           <p class="inviteCode"> 我的邀请码：<span class="code">1867895241</span></p>
         </div>
@@ -43,14 +42,21 @@
       </div>
       <div class="fixed-footer">
         <ul>
-          <li><a href="/template/recharge.html"><span class="trangle"></span>
+          <li><a href="/template/recharge.html">
               <p>立即充值</p></a></li>
-          <li><a href="/template/creditOfficer-mycustomer.html"><span class="trangle"><em>2</em></span>
+          <li><a href="/template/creditOfficer-mycustomer.html">
               <p>我的客户</p></a></li>
-          <li><a href="/" class="active"><span class="trangle"><em>9</em></span>
+          <li><a href="/template/creditOfficer-person.html">
               <p>贷款中心</p></a></li>
         </ul>
+        
+        
       </div>
+      <script>
+        $(function () {
+          $(".fixed-footer a").eq(2).addClass('active');
+        });
+      </script>
     </section>
   </body>
 </html>
