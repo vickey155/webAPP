@@ -137,15 +137,16 @@ h1 {
     color: #3d4145;
     font-weight: bold;
     width: 2.2rem;
-    padding: 0.08rem 0; }
+    height: 0.56rem;
+    vertical-align: middle;
+    line-height: 0.58rem; }
   .form-row .txt-wrap {
     float: right;
     color: #6d6d72;
     padding: 0.08rem 0; }
   .form-row input[type=text], .form-row input[type=number], .form-row input[type=date], .form-row input[type=file] {
     font-size: 0.28rem;
-    padding: 0.08rem 0;
-    border: 0.01rem solid transparent;
+    border: 1px solid transparent;
     border-radius: 0.07rem;
     padding-left: 0.1rem;
     width: 3.5rem;
@@ -153,7 +154,8 @@ h1 {
     color: #3d4145;
     overflow: hidden; }
   .form-row input[type=date] {
-    color: #999; }
+    color: #999;
+    background: none; }
   .form-row input[type=date].full {
     color: #3d4145; }
   .form-row input[type=date]::-webkit-outer-spin-button {
@@ -185,7 +187,7 @@ h1 {
       left: 0;
       z-index: 3; }
     .form-row .inputFile img {
-      max-width: 0.8rem; }
+      max-width: 1rem; }
     .form-row .inputFile .opacity {
       opacity: 0; }
   .form-row input.varityCode {
@@ -193,13 +195,12 @@ h1 {
     background-color: #fff;
     width: 3.2rem; }
   .form-row .select-wrapper {
-    padding: 0.08rem 0; }
+    padding-left: 0.08rem; }
   .form-row select {
     padding-left: 0.1rem;
-    margin-top: 0.04rem;
     height: 0.56rem;
     background: none;
-    border: 0.01rem solid transparent;
+    border: 1px solid transparent;
     border-radius: 0.07rem;
     appearance: none;
     -webkit-appearance: none;
@@ -220,6 +221,8 @@ h1 {
     @media screen and (min-width: 640px) {
       .form-row select {
         font-size: 0.32rem; } }
+  .form-row select option {
+    font-weight: normal; }
   .form-row select.selected {
     color: #3d4145; }
   .form-row .selectM {
@@ -227,7 +230,9 @@ h1 {
   .form-row .select-wrapper {
     display: inline-block; }
     .form-row .select-wrapper .selectS {
-      width: 1.1rem; }
+      width: 1.1rem;
+      height: 0.56rem;
+      padding: 0; }
   .form-row input[type=text].error-input, .form-row input[type=number].error-input, .form-row input[type=date].error-input, .form-row input[type=file].error-input {
     border-color: red; }
   .form-row .error-input {
@@ -1095,6 +1100,10 @@ header p {
     margin-top: 0.1rem; }
 
 /*下拉刷新*/
+p.loading {
+  text-align: center;
+  font-size: 0.28rem; }
+
 #scrollWrap {
   position: absolute;
   z-index: 1;

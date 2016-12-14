@@ -3,125 +3,120 @@ extends layout/layout
 block append headTitle
   title 我的客户
 block append headCss
-  script(type="text/javascript" src="../global/js/iscroll.js")
   script(type="text/javascript" src="../global/js/jsrender.min.js")
 block content
-  section.credit-myCustomer#scrollWrap
-    #scroller
-      .sec
-        .select-filter
-            select
-              option(value="") 贷款类型
-              option(value="工薪贷") 工薪贷
-              option(value="车辆抵押贷款") 车辆抵押贷款
-              option(value="房屋抵押贷款") 房屋抵押贷款
-              option(value="生意人贷") 生意人贷
-            select
-              option(value="") 客户来源
-              option(value="自己推广") 自己推广
-              option(value="微信推广") 微信推广
-              option(value="主动购买") 主动购买
-            select
-              option(value="") 贷款进度
-              option(value="待联系") 待联系
-              option(value="准备材料") 准备材料
-              option(value="进件客户") 进件客户
-              option(value="待签约") 申请通过-待签约
-              option(value="已签约放款") 已签约放款
-              option(value="贷款拒绝") 贷款拒绝
+  section.credit-myCustomer
+    .sec
+      .select-filter
+        select
+          option(value="") 贷款类型
+          option(value="工薪贷") 工薪贷
+          option(value="车辆抵押贷款") 车辆抵押贷款
+          option(value="房屋抵押贷款") 房屋抵押贷款
+          option(value="生意人贷") 生意人贷
+        select
+          option(value="") 客户来源
+          option(value="自己推广") 自己推广
+          option(value="微信推广") 微信推广
+          option(value="主动购买") 主动购买
+        select
+          option(value="") 贷款进度
+          option(value="待联系") 待联系
+          option(value="准备材料") 准备材料
+          option(value="进件客户") 进件客户
+          option(value="待签约") 申请通过-待签约
+          option(value="已签约放款") 已签约放款
+          option(value="贷款拒绝") 贷款拒绝
 
-        #scroller-content
-          .sec-content#temp-list
-            .per-page
-              p.concern-time  关注于 2016 / 09 / 20
-              table(cellspacing=0,cellpadding=0)
-                tr
-                  th 客户:
-                  td 张凌
-                  th 贷款需求:
-                  td 20万
-                tr
-                  th 工资发放形式:
-                  td 打卡工资
-                  th 社保公积金:
-                  td 有社保公积金
-                tr
-                  th 贷款类型:
-                  td 工薪贷
-                  th 贷款进度:
-                  td 准备材料
+      .sec-content#temp-list
+          .per-page
+            p.concern-time  关注于 2016 / 09 / 20
+            table(cellspacing=0,cellpadding=0)
+              tr
+                th 客户:
+                td 张凌
+                th 贷款需求:
+                td 20万
+              tr
+                th 工资发放形式:
+                td 打卡工资
+                th 社保公积金:
+                td 有社保公积金
+              tr
+                th 贷款类型:
+                td 工薪贷
+                th 贷款进度:
+                td 准备材料
 
 
-              .view-detail
-                a(href="") 查看详情
-            //-.per-page
-              p.concern-time  关注于 2016 / 09 / 20
-              table(cellspacing=0,cellpadding=0)
-                tr
-                  th 客户：
-                  td 张凌
-                  th 贷款需求：
-                  td 20万
-                tr
-                  th 工资发放形式：
-                  td 打卡工资
-                  th 社保公积金：
-                  td 有社保公积金
-                tr
-                  th 贷款类型：
-                  td 工薪贷
-                  th 贷款进度：
-                  td 准备材料
+            .view-detail
+              a(href="") 查看详情
+          //-.per-page
+            p.concern-time  关注于 2016 / 09 / 20
+            table(cellspacing=0,cellpadding=0)
+              tr
+                th 客户：
+                td 张凌
+                th 贷款需求：
+                td 20万
+              tr
+                th 工资发放形式：
+                td 打卡工资
+                th 社保公积金：
+                td 有社保公积金
+              tr
+                th 贷款类型：
+                td 工薪贷
+                th 贷款进度：
+                td 准备材料
 
 
-              .view-detail
-                a(href="") 查看详情
+            .view-detail
+              a(href="") 查看详情
 
-            //- .per-page
-              p.concern-time  关注于 2016 / 09 / 20
-              table(cellspacing=0,cellpadding=0)
-                tr
-                  th 客户：
-                  td 张凌
-                  th 贷款需求：
-                  td 20万
-                tr
-                  th 工资发放形式：
-                  td 打卡工资
-                  th 社保公积金：
-                  td 有社保公积金
-                tr
-                  th 贷款类型：
-                  td 工薪贷
-                  th 贷款进度：
-                  td 准备材料
-              .view-detail
-                a(href="") 查看详情
+          //=.per-page
+            p.concern-time  关注于 2016 / 09 / 20
+            table(cellspacing=0,cellpadding=0)
+              tr
+                th 客户：
+                td 张凌
+                th 贷款需求：
+                td 20万
+              tr
+                th 工资发放形式：
+                td 打卡工资
+                th 社保公积金：
+                td 有社保公积金
+              tr
+                th 贷款类型：
+                td 工薪贷
+                th 贷款进度：
+                td 准备材料
+            .view-detail
+              a(href="") 查看详情
 
-            //- .per-page
-              p.concern-time  关注于 2016 / 09 / 20
-              table(cellspacing=0,cellpadding=0)
-                tr
-                  th 客户：
-                  td 张凌
-                  th 贷款需求：
-                  td 20万
-                tr
-                  th 工资发放形式：
-                  td 打卡工资
-                  th 社保公积金：
-                  td 有社保公积金
-                tr
-                  th 贷款类型：
-                  td 工薪贷
-                  th 贷款进度：
-                  td 准备材料
-              .view-detail
-                a(href="") 查看详情
+          //- .per-page
+            p.concern-time  关注于 2016 / 09 / 20
+            table(cellspacing=0,cellpadding=0)
+              tr
+                th 客户：
+                td 张凌
+                th 贷款需求：
+                td 20万
+              tr
+                th 工资发放形式：
+                td 打卡工资
+                th 社保公积金：
+                td 有社保公积金
+              tr
+                th 贷款类型：
+                td 工薪贷
+                th 贷款进度：
+                td 准备材料
+            .view-detail
+              a(href="") 查看详情
 
-        #scroller-pullUp
-          span#up-icon.icon-double-angle-up.pull-up-icon
-          span#pullUp-msg.pull-up-msg  上拉刷新
+
 
   include temp/fixedFooter
 
@@ -132,24 +127,39 @@ block content
       $(".fixed-footer a").eq(1).addClass('active');
 
       var htmlList = function () {
+        var loading = true;
         var showList = function(){
+          var listWrap = $("#temp-list");
           $.ajax({
             type: "POST",
             url: "",
             data: {
               "org.id": "${org.id}"
             },
+            beforeSend:function(){
+              listWrap.find('.loading').remove();
+              var temp = '<p class="loading">正在加载中……</p>'
+              listWrap.append(temp);
+            },
             success: function (result) {
-              var dataSrouce = [{
-                "name": "zhangling",
-                "money": "20玩",
-                "typeSalary": "打卡工资",
-                "societySafy": "有社保公积金",
-                "typeLoan": "工薪贷",
-                "proceed": "准备材料"
-              }];
-              var html = $.templates("#testTmpl").render(dataSrouce);
-              $("#temp-list").append(html);
+              var dataNum = data.tatol;
+              var perPageNum = $("#temp-list .per-page").length;
+              listWrap.find('.loading').remove();
+              if(dataNum > perPageNum){
+                var dataSrouce = data.msg;
+                var html = $.templates("#testTmpl").render(dataSrouce);
+                listWrap.append(html);
+              }
+              else if(dataNum == perPageNum){
+                var temp = '<p class="loading">无更多数据</p>'
+                listWrap.append(temp);
+              }
+              loading = true;
+            },
+            error:function () {
+              listWrap.find('.loading').remove();
+              var temp = '<p class="loading">系统繁忙，请稍后再试</p>'
+              listWrap.append(temp);
             }
           });
         }
@@ -157,48 +167,30 @@ block content
           $("#temp-list").html("");
           showList();
         }
-        //下拉刷新
-        var scrollFun = function () {
-          if ($("#scrollWrap")[0]) {
-            var myScroll;
-            myScroll = new IScroll("#scrollWrap", { click: true, mouseWheel: true,scrollbars: true});
-            myScroll.on("scroll",function(){
-              console.log(this.maxScrollY);
-              var y = this.y,
-                  maxY = this.maxScrollY - y;
-              if(maxY >= 40){
-                console.log(this.maxScrollY);
-              }
-              else if(maxY < 40 && maxY >= 0) {
-                console.log(this.maxScrollY);
-              }
-            });
-            myScroll.on("slideDown", function () {
-              console.log('down');
-              if (this.maxScrollY - this.y > 40) {
-                showList();
-                myScroll.refresh();
-              }
-            });
-            myScroll.on("slideUp", function () {
-              console.log('up');
-              if (this.maxScrollY - this.y > 40) {
-                showList();
-                myScroll.refresh();
-              }
-            });
-          }
-        }
-        return {
-          initalList:function () {
-            initList();
-          },
-          scrollList:function () {
-            scrollFun();
-          }
-        }
-    }();
 
+      //加载更多
+      var loadMore = function(){
+        $(window).scroll(function () {
+          var docHei = $(document).height();
+          var scrollT = $(window).scrollTop();
+          if(scrollT+$(window).height()>docHei -20){
+              if(loading){
+                loading = false;
+                showList();
+              }
+          }
+        });
+      };
+      return {
+        initalList:function () {
+          initList();
+        },
+        scrollList:function () {
+          loadMore();
+        }
+      }
+    }();
+       //初始化列表
       //htmlList.initalList();
       htmlList.scrollList();
     }) ;

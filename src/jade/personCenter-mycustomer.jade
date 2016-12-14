@@ -4,32 +4,27 @@ extends layout/layout
 block append headTitle
   title VIP申请
 block append headCss
-  script(type="text/javascript" src="../global/js/iscroll.js")
   script(type="text/javascript" src="../global/js/jsrender.min.js")
 block content
-  section.myCustomer#scrollWrap
-    #scroller
+  section.myCustomer
       .sec
         .tap-wrapper
           .tab-btn#tabBtn
             a.active 全部
             a 关注未购买
             a 已购买
-          #scroller-content
-            .tab-content
-              .tab-cont#temp-list
-                .per-page
-                  h1 T-Mac
-                  p  关注时间：2016/9/18 16:34:33
-                .per-page
-                  h1 T-Mac
-                    span.font-red  已购买：收益10元
-                  p  关注时间：2016/9/18 16:34:33
+          .tab-content
+            .tab-cont#temp-list
+              .per-page
+                h1 T-Mac
+                p  关注时间：2016/9/18 16:34:33
+              .per-page
+                h1 T-Mac
+                  span.font-red  已购买：收益10元
+                p  关注时间：2016/9/18 16:34:33
 
 
-          #scroller-pullUp
-            span#up-icon.icon-double-angle-up.pull-up-icon
-            span#pullUp-msg.pull-up-msg  上拉刷新
+
 
 
   script.
@@ -42,20 +37,37 @@ block content
       });
       //显示列表
       var htmlList = function () {
+        var loading = true;
         var showList = function () {
+          $("#temp-list").find('.loading').remove();
           $.ajax({
             type: "POST",
             url: "",
             data: {
               "org.id": "${org.id}"
             },
+            beforeSend: function () {
+              var temp = '<p class="loading">正在加载中……</p>'
+              $("#temp-list").append(temp);
+            },
             success: function (result) {
-              var dataSrouce = [{
-                "name": "zhangling",
-                "money": "20玩"
-              }];
-              var html = $.templates("#testTmpl").render(dataSrouce);
-              $("#temp-list").append(html);
+              var dataNum = data.tatol;
+              var perPageNum = $("#temp-list .per-page").length;
+              if (dataNum > perPageNum) {
+                $("#temp-list")
+                var dataSrouce = data.msg;
+                var html = $.templates("#testTmpl").render(dataSrouce);
+                $("#temp-list").append(html);
+              }
+              else if (dataNum == perPageNum) {
+                var temp = '<p class="loading">无更多数据</p>'
+                $("#temp-list").append(temp);
+                loading = true;
+              }
+            },
+            error: function () {
+              var temp = '<p class="loading">系统繁忙，请稍后再试</p>'
+              $("#temp-list").append(temp);
             }
           });
         }
@@ -63,32 +75,25 @@ block content
           $("#temp-list").html("");
           showList();
         }
-        //下拉刷新
-        var scrollFun = function () {
-          if ($("#scrollWrap")[0]) {
-            var myScroll;
-            myScroll = new IScroll("#scrollWrap", { click: true, probeType: 3, mouseWheel: true});
-
-            myScroll.on("slideDown", function () {
-              if (this.maxScrollY - this.y > 40) {
+        //加载更多
+        var loadMore = function () {
+          $(window).scroll(function () {
+            var docHei = $(document).height();
+            var scrollT = $(window).scrollTop();
+            if (scrollT + $(window).height() > docHei - 20) {
+              if (loading) {
+                loading = false;
                 showList();
-                myScroll.refresh();
               }
-            });
-            myScroll.on("slideUp", function () {
-              if (this.maxScrollY - this.y > 40) {
-                showList();
-                myScroll.refresh();
-              }
-            });
-          }
-        }
+            }
+          });
+        };
         return {
           initalList: function () {
             initList();
           },
           scrollList: function () {
-            scrollFun();
+            loadMore();
           }
         }
       }();

@@ -43,7 +43,7 @@ $(function () {
         }
     });
    //地区联动
-    $(".region-select").regionSelect();
+   // $(".region-select").regionSelect();
   //申请页有无隐藏
    if($(".loan-applay-second")[0]){
        var isShowContent = function (self) {
@@ -73,7 +73,7 @@ $(function () {
 
    if($("form")[0]){
        var checkForm = function () {
-           var inputTxt = $("form input:not(:hidden)");
+           var inputTxt = $("form input:not(:hidden)").not('input[type=file]');
            var inputFile = $("form input[type=file]");
            var inputDate = $("form input[type=date]");
            var selectObj = $("form select:not(:hidden)");
@@ -136,12 +136,11 @@ $(function () {
 
 
        $("a.submit-a").on("click",function () {
-           console.log(checkForm());
            if(checkForm()){
-               //alert(0);
+             //提交任务
            }
            else{
-              // alert('fail');
+               return false;
            }
        });
    }

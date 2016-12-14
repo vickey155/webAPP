@@ -116,7 +116,9 @@ $blue:#0894ec;
     color:#3d4145;
     font-weight:bold;
     width:2.2rem;
-    padding: 0.08rem 0;
+    height: 0.56rem;
+    vertical-align: middle;
+    line-height: 0.58rem;
   }
   .txt-wrap{
     float:right;
@@ -126,8 +128,7 @@ $blue:#0894ec;
 
   input[type=text], input[type=number], input[type=date], input[type=file]{
     font-size: 0.28rem;
-    padding: 0.08rem 0;
-    border: 0.01rem solid transparent;
+    border:1px solid transparent;
     border-radius: 0.07rem;
     padding-left: 0.1rem;
     width: 3.5rem;
@@ -137,6 +138,7 @@ $blue:#0894ec;
   }
   input[type=date]{
     color: #999;
+    background: none;
   }
   input[type=date].full{
     color:#3d4145;
@@ -175,7 +177,7 @@ $blue:#0894ec;
       z-index: 3;
     }
     img{
-      max-width: 0.8rem;
+      max-width: 1rem;
     }
     .opacity{
       opacity: 0;
@@ -188,20 +190,22 @@ $blue:#0894ec;
     width: 3.2rem;
   }
   .select-wrapper{
-    padding: 0.08rem 0;
+    padding-left: 0.08rem;
   }
   select{
     padding-left: 0.1rem;
-    margin-top: 0.04rem;
     height: 0.56rem;
     background:none;
-    border: 0.01rem solid transparent;
+    border: 1px solid transparent;
     border-radius: 0.07rem;
     appearance: none;
     -webkit-appearance: none;
     outline: none;
     @include fontFormat($fz:0.28rem,$fc:$defaultC,$ta:center);
     color: #999;
+  }
+  select option{
+    font-weight:normal;
   }
   select.selected{
     color:$defaultC;
@@ -213,6 +217,8 @@ $blue:#0894ec;
     display: inline-block;
      .selectS{
        width:1.1rem;
+       height: 0.56rem;
+       padding:0;
      }
   }
 
@@ -907,6 +913,11 @@ header{
 
 
 /*下拉刷新*/
+p.loading{
+  text-align: center;
+  font-size: 0.28rem;
+
+}
 #scrollWrap{
   position: absolute;
   z-index: 1;
