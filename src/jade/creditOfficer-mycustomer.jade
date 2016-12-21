@@ -6,7 +6,7 @@ block append headCss
   script(type="text/javascript" src="../global/js/jsrender.min.js")
 block content
   section.credit-myCustomer
-    .sec
+    .sec.fixed-padding
       .select-filter
         select
           option(value="") 贷款类型
@@ -74,47 +74,6 @@ block content
             .view-detail
               a(href="") 查看详情
 
-          //=.per-page
-            p.concern-time  关注于 2016 / 09 / 20
-            table(cellspacing=0,cellpadding=0)
-              tr
-                th 客户：
-                td 张凌
-                th 贷款需求：
-                td 20万
-              tr
-                th 工资发放形式：
-                td 打卡工资
-                th 社保公积金：
-                td 有社保公积金
-              tr
-                th 贷款类型：
-                td 工薪贷
-                th 贷款进度：
-                td 准备材料
-            .view-detail
-              a(href="") 查看详情
-
-          //- .per-page
-            p.concern-time  关注于 2016 / 09 / 20
-            table(cellspacing=0,cellpadding=0)
-              tr
-                th 客户：
-                td 张凌
-                th 贷款需求：
-                td 20万
-              tr
-                th 工资发放形式：
-                td 打卡工资
-                th 社保公积金：
-                td 有社保公积金
-              tr
-                th 贷款类型：
-                td 工薪贷
-                th 贷款进度：
-                td 准备材料
-            .view-detail
-              a(href="") 查看详情
 
 
 
@@ -128,6 +87,12 @@ block content
 
       var htmlList = function () {
         var loading = true;
+        var showLoadingTxt = function (txt) {
+          var listWrap = $("#temp-list");
+          listWrap.find('.loading').remove();
+          var temp = '<p class="loading">' + txt + '</p>'
+          listWrap.append(temp);
+        }
         var showList = function(){
           var listWrap = $("#temp-list");
           $.ajax({
@@ -137,9 +102,7 @@ block content
               "org.id": "${org.id}"
             },
             beforeSend:function(){
-              listWrap.find('.loading').remove();
-              var temp = '<p class="loading">正在加载中……</p>'
-              listWrap.append(temp);
+              showLoadingTxt('正在加载中……');
             },
             success: function (result) {
               var dataNum = data.tatol;
@@ -151,15 +114,12 @@ block content
                 listWrap.append(html);
               }
               else if(dataNum == perPageNum){
-                var temp = '<p class="loading">无更多数据</p>'
-                listWrap.append(temp);
+                showLoadingTxt('无更多数据');
               }
               loading = true;
             },
             error:function () {
-              listWrap.find('.loading').remove();
-              var temp = '<p class="loading">系统繁忙，请稍后再试</p>'
-              listWrap.append(temp);
+              showLoadingTxt('系统繁忙，请稍后再试');
             }
           });
         }
@@ -191,7 +151,7 @@ block content
       }
     }();
        //初始化列表
-      //htmlList.initalList();
+      htmlList.initalList();
       htmlList.scrollList();
     }) ;
 

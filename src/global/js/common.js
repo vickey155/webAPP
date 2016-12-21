@@ -45,7 +45,7 @@ $(function () {
    //地区联动
    // $(".region-select").regionSelect();
   //申请页有无隐藏
-   if($(".loan-applay-second")[0]){
+    if($(".loan-applay-second")[0]){
        var isShowContent = function (self) {
            var selectedOpt = self.find("option:selected");
            var selectedVal = $.trim(selectedOpt.val());
@@ -69,8 +69,19 @@ $(function () {
 
 
    }
-
-
+   //banner 轮播
+    if($("#banner")[0]){
+        TouchSlide({
+            slideCell:"#banner",
+            titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+            mainCell:".bd ul",
+            effect:"leftLoop",
+            autoPlay:true,//自动播放
+            autoPage:true, //自动分页
+            interTime: 3000
+        });
+    }
+   //表单验证
    if($("form")[0]){
        var checkForm = function () {
            var inputTxt = $("form input:not(:hidden)").not('input[type=file]');

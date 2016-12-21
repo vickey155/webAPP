@@ -3,11 +3,24 @@ extends layout/layout
 
 block append headTitle
   title 房抵押贷款
-
+block append headCss
+  script(type="text/javascript" src="../global/js/TouchSlide.1.1.js")
 block content
   section
-    .banner
-      img(src="../global/images/APPbanner.jpg")
+    .banner#banner
+      .hd
+        ul
+      .bd
+        ul
+          li
+            a
+              img(src="../global/images/APPbanner.jpg")
+          li
+            a
+              img(src="../global/images/banner.jpg")
+          li
+            a
+              img(src="../global/images/banner.jpg")
     .sec
       p 请完善以下信息，以便我们为您制定专属贷款方案
       form.valid-form(autocomplete="on")

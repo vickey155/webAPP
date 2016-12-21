@@ -2,12 +2,25 @@ extends layout/layout
 
 block append headTitle
   title 首页
-
+block append headCss
+  script(type="text/javascript" src="../global/js/TouchSlide.1.1.js")
 block content
   section
     .loan-index
-      .banner
-        img(src="../global/images/APPbanner.jpg")
+      .banner#banner
+        .hd
+          ul
+        .bd
+          ul
+            li
+              a
+                img(src="../global/images/APPbanner.jpg")
+            li
+              a
+                img(src="../global/images/banner.jpg")
+            li
+              a
+                img(src="../global/images/banner.jpg")
       .sec
         p 为您提供如下贷款
         div.bg-white

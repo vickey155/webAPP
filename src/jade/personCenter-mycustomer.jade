@@ -7,12 +7,12 @@ block append headCss
   script(type="text/javascript" src="../global/js/jsrender.min.js")
 block content
   section.myCustomer
-      .sec
+      .sec.fixed-padding
         .tap-wrapper
           .tab-btn#tabBtn
-            a.active 全部
-            a 关注未购买
-            a 已购买
+            a.active(href="javascript:void(0);") 全部
+            a(href="javascript:void(0);") 关注未购买
+            a(href="javascript:void(0);") 已购买
           .tab-content
             .tab-cont#temp-list
               .per-page
@@ -38,8 +38,14 @@ block content
       //显示列表
       var htmlList = function () {
         var loading = true;
+        var showLoadingTxt = function (txt) {
+          var listWrap = $("#temp-list");
+          listWrap.find('.loading').remove();
+          var temp = '<p class="loading">'+txt+'</p>'
+          listWrap.append(temp);
+        }
         var showList = function () {
-          $("#temp-list").find('.loading').remove();
+          var listWrap = $("#temp-list");
           $.ajax({
             type: "POST",
             url: "",
@@ -47,27 +53,25 @@ block content
               "org.id": "${org.id}"
             },
             beforeSend: function () {
-              var temp = '<p class="loading">正在加载中……</p>'
-              $("#temp-list").append(temp);
+              showLoadingTxt('正在加载中……');
             },
             success: function (result) {
               var dataNum = data.tatol;
               var perPageNum = $("#temp-list .per-page").length;
+              listWrap.find('.loading').remove();
               if (dataNum > perPageNum) {
                 $("#temp-list")
                 var dataSrouce = data.msg;
                 var html = $.templates("#testTmpl").render(dataSrouce);
-                $("#temp-list").append(html);
+                listWrap.append(html);
               }
               else if (dataNum == perPageNum) {
-                var temp = '<p class="loading">无更多数据</p>'
-                $("#temp-list").append(temp);
-                loading = true;
+                showLoadingTxt('无更多数据');
               }
+              loading = true;
             },
             error: function () {
-              var temp = '<p class="loading">系统繁忙，请稍后再试</p>'
-              $("#temp-list").append(temp);
+              showLoadingTxt('系统繁忙，请稍后再试');
             }
           });
         }

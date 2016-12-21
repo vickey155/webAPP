@@ -12,16 +12,14 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="../global/css/reset.css">
     <link rel="stylesheet" href="../global/css/common.css">
-    <link rel="stylesheet" href="../global/css/iscroll.css">
     <script type="text/javascript" src="../global/js/jquery.min.js"></script>
-    <script type="text/javascript" src="../global/js/jquery.regionSelect.js"></script>
     <script type="text/javascript" src="../global/js/common.js"></script>
     <script type="text/javascript" src="../global/js/jsrender.min.js"></script>
     <script>document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';</script>
   </head>
   <body>
     <section class="credit-myCustomer">
-      <div class="sec">
+      <div class="sec fixed-padding">
         <div class="select-filter">
           <select>
             <option value="">贷款类型</option>
@@ -71,28 +69,6 @@
             </table>
             <div class="view-detail"><a href="">查看详情</a></div>
           </div>
-          <!--=.per-page
-          p.concern-time  关注于 2016 / 09 / 20
-          table(cellspacing=0,cellpadding=0)
-            tr
-              th 客户：
-              td 张凌
-              th 贷款需求：
-              td 20万
-            tr
-              th 工资发放形式：
-              td 打卡工资
-              th 社保公积金：
-              td 有社保公积金
-            tr
-              th 贷款类型：
-              td 工薪贷
-              th 贷款进度：
-              td 准备材料
-          .view-detail
-            a(href="") 查看详情
-          
-          -->
         </div>
       </div>
     </section>
@@ -114,6 +90,12 @@
       
         var htmlList = function () {
           var loading = true;
+          var showLoadingTxt = function (txt) {
+            var listWrap = $("#temp-list");
+            listWrap.find('.loading').remove();
+            var temp = '<p class="loading">' + txt + '</p>'
+            listWrap.append(temp);
+          }
           var showList = function(){
             var listWrap = $("#temp-list");
             $.ajax({
@@ -123,9 +105,7 @@
                 "org.id": "${org.id}"
               },
               beforeSend:function(){
-                listWrap.find('.loading').remove();
-                var temp = '<p class="loading">正在加载中……</p>'
-                listWrap.append(temp);
+                showLoadingTxt('正在加载中……');
               },
               success: function (result) {
                 var dataNum = data.tatol;
@@ -137,15 +117,12 @@
                   listWrap.append(html);
                 }
                 else if(dataNum == perPageNum){
-                  var temp = '<p class="loading">无更多数据</p>'
-                  listWrap.append(temp);
+                  showLoadingTxt('无更多数据');
                 }
                 loading = true;
               },
               error:function () {
-                listWrap.find('.loading').remove();
-                var temp = '<p class="loading">系统繁忙，请稍后再试</p>'
-                listWrap.append(temp);
+                showLoadingTxt('系统繁忙，请稍后再试');
               }
             });
           }
@@ -177,7 +154,7 @@
         }
       }();
          //初始化列表
-        //htmlList.initalList();
+        htmlList.initalList();
         htmlList.scrollList();
       }) ;
       
